@@ -8,27 +8,23 @@ var htmlmini =require("gulp-minify-html");
 var less =require("gulp-less");
 var browsersync =require("browser-sync").create();
 var reload =browsersync.reload;
-gulp.task("consol",function () {
-    gulp.src("./gulp_demo02/index.html")
-        .pipe(gulp.dest("./dist/html"))
-});
 gulp.task("myuglify",function () {
-    gulp.src("gulp_demo01/*.js")
+    gulp.src("src/*.js")
         .pipe(uglify())
-        .pipe(gulp.dest("./src/js"))
+        .pipe(gulp.dest("./dist/js"))
 });
 gulp.task("minify-css",function () {
-    gulp.src("gulp_demo01/*.css")
+    gulp.src("src/*.css")
         .pipe(cleanCSS())
         .pipe(gulp.dest("./dist/css"))
 });
 gulp.task("minify-html",function () {
-    gulp.src("gulp_demo01/*.html")
+    gulp.src("src/*.html")
         .pipe(htmlmini())
         .pipe(gulp.dest("./dist/html"))
 });
 gulp.task("myless",function () {
-    gulp.src("gulp_demo01/*.less")
+    gulp.src("src/*.less")
         .pipe(less())
         .pipe(gulp.dest("./dist/css"))
         .pipe(reload({stream:true}))
