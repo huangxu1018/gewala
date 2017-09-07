@@ -19,12 +19,12 @@ gulp.task("minify-css",function () {
         .pipe(gulp.dest("./dist/css"))
 });
 gulp.task("minify-html",function () {
-    gulp.src("src/*.html")
+    gulp.src("src/html/*.html")
         .pipe(htmlmini())
         .pipe(gulp.dest("./dist/html"))
 });
 gulp.task("myless",function () {
-    gulp.src("src/*.less")
+    gulp.src("src/less/*.less")
         .pipe(less())
         .pipe(gulp.dest("./dist/css"))
         .pipe(reload({stream:true}))
@@ -33,6 +33,6 @@ gulp.task("serve",["myless"],function () {
     browsersync.init({
         server:"./"
     });
-    gulp.watch("src/*.less",["myless"]);
+    gulp.watch("src/less/*.less",["myless"]);
     gulp.watch("*.html").on("change",reload);
 });
