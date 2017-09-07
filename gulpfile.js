@@ -6,7 +6,7 @@ var uglify =require("gulp-uglify");
 var cleanCSS =require("gulp-clean-css");
 var htmlmini =require("gulp-minify-html");
 var less =require("gulp-less");
-var browsersync =require("browser-sync").create();
+var browsersync =mrequire("browser-sync").create();
 var reload =browsersync.reload;
 gulp.task("myuglify",function () {
     gulp.src("src/*.js")
@@ -24,7 +24,7 @@ gulp.task("minify-html",function () {
         .pipe(gulp.dest("./dist/html"))
 });
 gulp.task("myless",function () {
-    gulp.src("src/*.less")
+    gulp.src("src/less/*.less")
         .pipe(less())
         .pipe(gulp.dest("./dist/css"))
         .pipe(reload({stream:true}))
