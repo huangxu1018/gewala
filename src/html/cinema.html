@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.js"></script>
+    <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        #box{
+            width: 100%;
+            font-family: 楷体;
+        }
+        .cinema{
+            border-bottom: 1px solid #beb7b6;
+            height: 120px;
+        }
+        .mycinema{
+            padding-top: 18px;
+        }
+        .cinema a{
+            text-decoration: none;
+            color: black;
+        }
+        .cinema p{
+            padding-right: 5%;
+            padding-left: 5%;
+            font-size:15px ;
+        }
+        .cinema .theater{
+            font-size: 17px;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-bottom: 4px;
+        }
+        .cinema .myp{
+            color:#9b9f98;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        span{
+            float: right;
+            color: #f26522;
+        }
+        .km{
+            color:#9b9f98;
+            font-size: 13px;
+        }
+        #mybtn{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 10px;
+        }
+        #mybtn button{
+            border: 1px solid #9b9f98;
+            background-color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!----筛选---->
+<div class="screening">
+    <ul>
+        <li class="district"><img src="../../img/地址.png" height="20" width="20"/>区域</li>
+        <li class="feature"><img src="../../img/-漏斗图.png" height="20" width="20"/>特色</li>
+        <li class="search"><img src="../../img/搜索.png" height="20" width="20"/>搜索影院</li>
+    </ul>
+</div>
+
+<div class="mydistrict">
+    <ul class="mydis" id="mydisa">
+        <li onclick="mydisa(this)"><div class="mydis1">区域</div></li>
+        <li onclick="mydisa(this)"><div class="mydis2">地铁</div></li>
+        <li onclick="mydisa(this)"><div class="mydis3">商圈</div></li>
+    </ul>
+    <!----区域---->
+    <ul class="quyu" id="myquyu">
+        <li onclick="mydist(this)">全部</li>
+        <li onclick="mydist(this)">荔湾区</li>
+        <li onclick="mydist(this)">越秀区</li>
+        <li onclick="mydist(this)">海珠区</li>
+        <li onclick="mydist(this)">天河区</li>
+        <li onclick="mydist(this)">白云区</li>
+        <li onclick="mydist(this)">黄埔区</li>
+        <li onclick="mydist(this)">番禺区</li>
+        <li onclick="mydist(this)">花都区</li>
+        <li onclick="mydist(this)">南沙区</li>
+        <li onclick="mydist(this)">萝岗区</li>
+        <li onclick="mydist(this)">增城区</li>
+        <li onclick="mydist(this)">从化市</li>
+    </ul>
+    <!----地铁---->
+    <ul class="metro" id="ymetro">
+        <li onclick="mydisr(this)">全部</li>
+        <li onclick="mydisr(this)">1号线</li>
+        <li onclick="mydisr(this)">2号线</li>
+        <li onclick="mydisr(this)">3号线</li>
+        <li onclick="mydisr(this)">4号线</li>
+        <li onclick="mydisr(this)">5号线</li>
+        <li onclick="mydisr(this)">6号线</li>
+        <li onclick="mydisr(this)">8号线</li>
+        <li onclick="mydisr(this)">广佛线</li>
+        <li onclick="mydisr(this)">APM线</li>
+    </ul>
+    <!----商圈---->
+    <ul class="trading" id="mytrading">
+        <li onclick="mydisi(this)">全部</li>
+        <li onclick="mydisi(this)">西关</li>
+        <li onclick="mydisi(this)">东山</li>
+        <li onclick="mydisi(this)">北京路</li>
+        <li onclick="mydisi(this)">小北</li>
+        <li onclick="mydisi(this)">江南西</li>
+        <li onclick="mydisi(this)">天河</li>
+        <li onclick="mydisi(this)">岗顶数码</li>
+        <li onclick="mydisi(this)">珠江新城</li>
+        <li onclick="mydisi(this)">番禺大北路</li>
+    </ul>
+</div>
+
+<div class="myfeature">
+    <ul class="myfea" id="myfeat">
+        <li onclick="myfeat(this)"><div class="myfea1">特效厅</div></li>
+        <li onclick="myfeat(this)"><div class="myfea2">服务</div></li>
+    </ul>
+    <!----特效厅---->
+    <ul class="special" id="myspecial">
+        <li onclick="myfeau(this)">全部</li>
+        <li onclick="myfeau(this)">4D厅</li>
+        <li onclick="myfeau(this)">VIP厅</li>
+        <li onclick="myfeau(this)">巨幕厅</li>
+        <li onclick="myfeau(this)">4K厅</li>
+        <li onclick="myfeau(this)">情侣厅</li>
+        <li onclick="myfeau(this)">中国巨幕</li>
+        <li onclick="myfeau(this)">杜比全景声厅</li>
+        <li onclick="myfeau(this)">IMAX厅</li>
+        <li onclick="myfeau(this)">MX4D厅</li>
+        <li onclick="myfeau(this)">RealD 6FL厅</li>
+    </ul>
+    <!----服务---->
+    <ul class="service" id="myservice">
+        <li onclick="myfear(this)">全部</li>
+        <li onclick="myfear(this)">免费停车</li>
+        <li onclick="myfear(this)">情侣座</li>
+        <li onclick="myfear(this)">退票</li>
+        <li onclick="myfear(this)">自定票</li>
+    </ul>
+</div>
+
+<div id="box">
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">金逸影城-二沙岛电影会所<span>6.6</span></div>
+             <p>二沙岛烟雨路28号（星海音乐厅旁）<span class="km">1.2km</span></p>
+             <p class="myp">放映4部余24场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">广州UA IMAX花城汇电影城<span>5.0</span></div>
+             <p>花城大道89号花城广场花城汇北区<span class="km">1.8km</span></p>
+             <p class="myp">放映10部余40场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">广州飞扬影城-高德店<span>7.7</span></div>
+             <p>珠江东路14号高德置地东广场5楼<span class="km">1.9km</span></p>
+             <p class="myp">放映6部余33场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">广州飞扬影城-天河城店<span>6.6</span></div>
+             <p>天河路208号天河城4楼<span class="km">2.0km</span></p>
+             <p class="myp">放映4部余24场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">金逸影城-广州维家思店<span>6.4</span></div>
+             <p>黄埔大道西188号维家思广场3楼<span class="km">2.0km</span></p>
+             <p class="myp">放映4部余7场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">百丽宫影城（天环店）<span>5.7</span></div>
+             <p>天河城218号天环广场负一层B117号<span class="km">2.2km</span></p>
+             <p class="myp">放映4部余24场</p>
+         </a>
+         </div>
+     </div>
+
+     <div class="cinema">
+         <div class="mycinema">
+         <a href="#">
+             <div class="theater">金逸空中电影城<span>2.8</span></div>
+             <p>阅江西路22号广州塔B功能区17-22层<span class="km">2.3km</span></p>
+             <p class="myp">放映6部余10场</p>
+         </a>
+         </div>
+     </div>
+    <!--加载中-->
+     <div id="mybtn">
+          <button type="button">加载中...</button>
+     </div>
+</div>
+</body>
+</html>

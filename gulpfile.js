@@ -6,7 +6,7 @@ var uglify =require("gulp-uglify");
 var cleanCSS =require("gulp-clean-css");
 var htmlmini =require("gulp-minify-html");
 var less =require("gulp-less");
-var browsersync =mrequire("browser-sync").create();
+var browsersync =require("browser-sync").create();
 var reload =browsersync.reload;
 gulp.task("myuglify",function () {
     gulp.src("src/*.js")
