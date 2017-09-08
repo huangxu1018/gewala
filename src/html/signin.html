@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scalc=1.0，
+                                   maximum-scale=1.0，
+                                   user-scalable=no">
+
+    <script src="../../../Angular/route/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../../Angular/route/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../../Angular/route/bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="../../bower_components/angular/angular.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            background-color:#f3f3f3;
+        }
+        /*顶部栏*/
+        #header{
+            height:46px;
+            width: 100%;
+            background-color: #f26422;}
+
+        #header a{
+            text-decoration: none;
+            color: #ffffff;
+            display: inline-block;
+            line-height: 46px;
+            text-align: center;
+            font-size: 16px;
+        }
+        /*注册输入框*/
+        .form-group{
+            position: relative;
+            height: 46px;
+            border: solid 1px #dbdbdb;
+            padding: 0 0 0 8px;
+            background-size: 18px auto;
+            width:95%;
+            margin-left: 2.5%;
+        }
+        .form-group img{
+            float: left;
+            display: inline-block;
+            margin-top: 12px;
+
+        }
+        .form-group input{
+            float:left;
+            height: 44px;
+            border: none;
+            /*width: 100%;*/
+            margin-left: 10px;
+            display: inline-block;
+        }
+        .sigin_btn{
+            background-color: #f26422;
+            color: #FFFFFF;
+            width: 100%;
+            height: 46px;
+            border-radius: 4px;
+            border: 3px solid #FFFFFF;
+        }
+        .tar{
+            text-align: right;
+            margin: 7px 10px 10px;
+        }
+        .gwl_protocol,.login{
+            color:#f26422;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--顶部栏-->
+<div id="header">
+    <a style="width:10%" class="back"><</a>
+    <a style="width:75%">注册</a>
+</div>
+<!--注册框-->
+<div>
+    <br><br>
+    <form ng-app="myApp04" name="myForm" ng-controller="myCtrl" novalidate>
+        <!--手机号码-->
+        <div class="form-group">
+            <span><img src="../../img/电话.png" height="20" width="20"/></span>
+            <input type="text" id="phone" name="phone" ng-model="phone" placeholder="11位手机号"
+                    ng-minlength="11" ng-maxlength="11" ng-pattern="/^1[3|5][0-9]\d{4,8}$/" required>
+
+            <br>
+            <span style="color: red;" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+               <span ng-show="myForm.phone.$error.required">电话号码不能为空！</span>
+               <span ng-show="myForm.phone.$error.minlength||myForm.phone.$error.maxlength
+                             ||myForm.phone.$error.pattern">请输入正确的手机号码！</span>
+            </span>
+        </div>
+        <br>
+        <!--验证码-->
+        <div class="form-group">
+            <img src="../../img/盾牌.png" height="20" width="20"/>
+            <input type="text" id="code" name="code" ng-model="code" placeholder="验证码"
+                   ng-minlength="4" ng-maxlength="4" required>
+            <br>
+            <span style="color: red;" ng-show="myForm.code.$dirty && myForm.code.$invalid">
+                <span ng-show="myForm.code.$error.required">验证码不能为空！</span>
+                <span ng-show="myForm.code.$error.minlength||myForm.code.$error.maxlength
+                              ||myForm.code.$error.pattern">请输入正确的验证码！</span>
+            </span>
+        </div>
+        <br>
+        <!--短信动态-->
+        <div class="form-group">
+            <div class="img">
+            <img src="../../img/盾牌.png" height="20" width="20"/>
+            </div>
+            <div class="input">
+            <input type="text" id="message" name="message" ng-model="message" placeholder="6位短信动态码"
+                    ng-minlength="6" ng-maxlength="6" ng-pattern="[/^[0-9]*$/]" required></div>
+            <br>
+            <span style="color: red" ng-show="myForm.message.$dirty && myForm.message.$invalid">
+                <span ng-show="myForm.message.$error.required">验证码不能为空！</span>
+                <span ng-show="myForm.message.$error.minlength||myForm.message.$error.maxlength
+                              ||myForm.message.$error.pattern">请输入正确的验证码！</span>
+            </span>
+        </div>
+        <br>
+        <!--密码-->
+        <div class="form-group">
+            <img src="../../img/密码.png" height="20" width="20"/>
+            <input type="text" id="password" name="password" ng-model="password" placeholder="密码(6-14位字符)"
+                    ng-minlength="6" ng-maxlength="14" required>
+            <br>
+            <span style="color: red;" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                   <span ng-show="myForm.password.$error.required">密码不能为空</span>
+                   <span ng-show="myForm.password.$error.minlength||myForm.password.$error.maxlength
+                                 ||myForm.password.$error.pattern">密码格式不正确！</span>
+            </span>
+        </div>
+        <br>
+        <label><input type="checkbox" checked="checked">我已阅读并同意<a class="gwl_protocol">格瓦拉用户协议</a></label>
+        <br>
+        <button type="submit" class="sigin_btn"
+                ng-disabled="myForm.phone.$dirty && myForm.phone.$invalid ||
+                             myForm.code.$dirty && myForm.code.$invalid ||
+                             myForm.message.$dirty && myForm.message.$invalid ||
+                             myForm.password.$dirty && myForm.password.$invalid">注册</button>
+    </form>
+    <p class="tar"><span>已有账号？</span><a href="login.html" class="login">立即登录</a></p>
+</div>
+
+<script>
+    var app=angular.module("myApp04",[]);
+    app.controller("myCtrl",function ($scope) {
+
+    })
+</script>
+</body>
+</html>
