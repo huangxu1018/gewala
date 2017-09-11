@@ -35,15 +35,21 @@
   color: #f26422;
 }
 /*输入框*/
+<<<<<<< HEAD
 .login_user,
 .login_psw,
 .login_code {
+=======
+.form-group {
+  position: relative;
+>>>>>>> 5d5fe711605848ea4cbe08cad0ab5b024d41dcc1
   height: 46px;
   border: solid 1px #dbdbdb;
   padding: 0 0 0 8px;
   background-size: 18px auto;
   width: 95%;
   margin-left: 2.5%;
+<<<<<<< HEAD
 }
 .login_user input,
 .login_psw input,
@@ -51,6 +57,21 @@
   height: 44px;
   border: none;
   width: 95%;
+=======
+}
+.form-group img {
+  float: left;
+  display: inline-block;
+  margin-top: 12px;
+}
+.form-group input {
+  float: left;
+  height: 44px;
+  border: none;
+  width: 78%;
+  margin-left: 10px;
+  display: inline-block;
+>>>>>>> 5d5fe711605848ea4cbe08cad0ab5b024d41dcc1
 }
 .login_btn {
   background-color: #f26422;
