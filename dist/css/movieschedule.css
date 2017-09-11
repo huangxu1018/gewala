@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+/*顶部栏*/
+#header {
+  height: 46px;
+  width: 100%;
+  background-color: #f26422;
+}
+#header a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 46px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.dropdown {
+  float: right;
+}
+.dropdown .dropdown-menu {
+  background-color: #f2620f;
+  height: 85px;
+  border: #f2620f;
+  margin: 0;
+  border-radius: 0;
+  min-width: 10%;
+}
+.dropdown .dropdown-menu a:hover {
+  background-color: #f26522 ;
+}
