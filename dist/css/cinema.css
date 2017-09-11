@@ -6,8 +6,8 @@ body {
   height: 55px;
   background-color: #f26522;
   line-height: 55px;
-  padding-left: 4%;
   position: relative;
+  text-align: center;
 }
 #header a {
   color: white;
@@ -15,14 +15,14 @@ body {
   text-decoration: none;
 }
 #header .retu {
-  width: 5%;
-}
-#header h1 {
   position: absolute;
+  left: 0px;
   top: 0px;
+  padding-left: 4%;
+}
+#header .cinema_headname {
+  font-size: 18px;
   color: white;
-  font-size: 21px;
-  padding-left: 20%;
 }
 #header label {
   position: absolute;
