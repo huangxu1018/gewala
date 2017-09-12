@@ -1,0 +1,103 @@
+body {
+  font-family: 楷体;
+}
+#header {
+  width: 100%;
+  height: 46px;
+  background-color: #f26522;
+  line-height: 46px;
+  position: relative;
+  text-align: center;
+}
+#header .retu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding-left: 8%;
+  padding-right: 5%;
+}
+#header .retu a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+#header .cinema_headname {
+  font-size: 18px;
+  color: white;
+}
+.main {
+  background-color: gray;
+  height: 480px;
+  color: white;
+}
+.main .titl {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.main .ym {
+  font-size: 17px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  text-align: center;
+  padding-top: 5px;
+  height: 33px;
+}
+.main .contain {
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+}
+.main .contain .left {
+  background-color: #9d9fa0;
+  border-radius: 25px;
+  width: 7%;
+  height: 320px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.main .contain .left ul li {
+  list-style-type: none;
+  margin-bottom: 16px;
+}
+.main .contain .right {
+  width: 90%;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  overflow: auto;
+}
+.main .contain .right table tr td img {
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+.footer {
+  width: 100%;
+  padding-left: 4%;
+  position: relative;
+}
+.footer .xz {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.footer .fd {
+  padding-top: 20px;
+  border-top: 1px dashed gray;
+}
+.footer .fd .fot {
+  position: absolute;
+  width: 70%;
+  font-size: 15px;
+}
+.footer .fd button {
+  background-color: #f26522;
+  height: 40px;
+  width: 30%;
+  border: 1px solid #f26522;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 80px;
+  right: 5%;
+}

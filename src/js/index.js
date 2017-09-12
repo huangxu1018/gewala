@@ -1,12 +1,6 @@
 /**
  * Created by huangx des DATE 2017/9/6.TIME 17:09.
  */
-// $("document").ready(function(){
-//     $(".menu li").click(function(){
-//         $(".menu li").removeClass("active");//首先移除全部的active
-//         $(this).addClass("active");//选中的添加active
-//     });
-// });
 function show(){
     var a=document.getElementById('district');
     if( a.style.display==""|| a.style.display=="none"){
@@ -29,3 +23,26 @@ function show2(){
     }else{
         c.style.display = "none";}
 }
+(function (angular) {
+    var hotModule = angular.module('myapp', ['ngRoute']);
+    hotModule
+        .controller('HotController', ["$scope", "$http",
+            function ($scope, $http) {
+                window.doubanMovieCallback = function (data) {
+                    if (data.msg) {
+                        //返回错误信息
+                        $scope.message = data.msg;
+                    } else {
+                        $scope.movies = data;
+                        $scope.message = '';
+                    }
+                };
+                //网络请求地址
+                var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
+                $http.jsonp(url).error(function () {
+
+                });
+
+            }]);
+
+})(angular);
