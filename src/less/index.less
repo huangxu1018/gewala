@@ -7,10 +7,10 @@ body{
 }
 #header{
   width: 100%;
-  height: 55px;
+  height: 46px;
   background-color:#f26522;
-  line-height: 55px ;
-  padding-left: 4%;
+  line-height: 46px ;
+  padding-left: 5%;
   a{
     color: white;
     font-size: 18px;
@@ -18,7 +18,7 @@ body{
   }
   .dropdown{
     float: right;
-    padding-right: 2%;
+    padding-right: 5%;
     .dropdown-menu{
       background-color:#f2620f;
       height: 85px;
@@ -37,25 +37,31 @@ body{
   text-align: center;
 }
 .nav-tabs {
-  border-bottom: 1px solid #d3d7cc;
+  border-bottom: 2px solid #d3d7cc;
   li a{
     color: black;
   }
 }
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+.nav-tabs>li.active>#movie_active,.nav-tabs>li.active>#movie_home,
+.nav-tabs>li.active>#movie_active:focus,.nav-tabs>li.active>#movie_home:focus,
+.nav-tabs>li.active>#movie_active:hover,.nav-tabs>li.active>#movie_home:hover {
   background-color: #fff;
   border: 0px;
   color:#f2620f ;
-  border-bottom: 1px solid #f2620f;
+  border-bottom: 2px solid #f2620f;
 }
 .nav-tabs>li>a {
-  margin-right: 0px;
-  border-radius:0px;
-  &:hover {
-  background-color: white;
-  border: none;
-  border-bottom: 1px solid #d3d7cc;
+   margin-right: 0px;
+   border-radius:0px;
+   border:0px;
+   padding: 9px 15px;
+   &:hover {
+     background-color: white;
+     border: none;
+   }
  }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border: 0px;
 }
 .screening {
   width: 100%;
