@@ -12,10 +12,21 @@
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../js/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../dist/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../dist/css/owl.theme.css">
+
     <link rel="stylesheet" href="../../dist/css/movieschedule.css">
+
     <title>Title</title>
     <style>
-
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: none;
+            background-color:#f3f3f3;
+        }
         /*影院信息*/
         #detial{
             height:69px;
@@ -32,8 +43,80 @@
             height:66px
         }
         /*电影展示图*/
+        .movie_nav{
+            width:95%;
+            height: 191px;
+            margin-left: 2.5%;
+            border-bottom:dashed 1px #cccccc;
+        }
+        #owl-demo .item {
+            margin: 3px;
+        }
+        ul{
+            width: 100%;
+            height: 112px;
+            margin-top: 2px;
+        }
+        li{
+            width:100%;
+            height:112px;
+            margin-top: 2px;
+        }
+
+        #owl-demo .item img {
+            display: block;
+            width: 100%;
+            height:100%;
+        }
+        /*电影信息*/
+        .nav-tabs{
+            width:100%;
+            height: 36px;
+        }
+        .nav-tabs li,.nav-tabs li a{
+            width:121px;
+            height:36px;
+        }
+        #movieContent .title{
+            margin-left: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color:#4d4d4d;
+        }
+        #movieContent .type{
+            margin-left: 8px;
+            color:#8e8e8e;
+        }
+        #movieContent .title span{
+            color:#f26422;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        /*时间场次*/
+        table{
+            width: 100%;
+
+        }
+        td{
+            padding-left: 5%;
+
+            padding-right:5%;
+        }
+        .jq{
+            color: #f26422;
+            font-weight: bold;
+        }
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+            color: #FF5722;
+            cursor: default;
+            border: 1px solid #ddd;
+            background-color: #efefef;
+            border-bottom-color: transparent;
+        }
+
 
     </style>
+
 
 
 </head>
@@ -66,36 +149,725 @@
 </div>
 
 <!--电影展示图-->
-<div class="movie_nav">
-    <div class="movie_nav_left">
-        <div class="movie_nav_list" id="">
-            <ul>
-                <li><img src="../../img/Y-spiderman.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-Gintama.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-Dunkirk.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-Paradox.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-WarOfThePlanet.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-ValerianAndTheCity.jpg" height="360" width="270"/></li>
-                <li><img src="../../img/Y-WolfWarriors2.jpg" height="360" width="270"/></li>
-                <li class="sideline"></li>
-            </ul>
+<div class="">
+    <!--图片列表-->
+    <div class="movie_nav">
+       <ul id="myTab" class="owl-carousel owl-theme tabs">
+           <li  class="item">
+               <a href="#spiderman" data-toggle="tab" id="spiderman_active" onclick="show01()">
+                  <img src="../../img/Y-spiderman.jpg" height="112" width="72"/>
+               </a>
+           </li>
+
+           <li  class="item">
+               <a href="#Gintama" data-toggle="tab"  id="Gintama_active" onclick="show02()">
+                   <img src="../../img/Y-Gintama.jpg" height="112" width="72"/>
+               </a>
+           </li>
+
+           <li  class="item">
+               <a href="#Dunkirk" data-toggle="tab" id="Dunkirk_active" onclick="show03()">
+                   <img src="../../img/Y-Dunkirk.jpg" height="112" width="72"/>
+               </a>
+           </li>
+
+           <li  class="item">
+               <a href="#WarOfThePlanet" data-toggle="tab" id="WarOfThePlanet_active" onclick="show04()">
+                   <img src="../../img/Y-WarOfThePlanet.jpg" height="112" width="72"/>
+               </a>
+           </li>
+
+           <li  class="item">
+               <a href="#Valerian" data-toggle="tab" id="Valerian_active" onclick="show05()">
+                   <img src="../../img/Y-Valerian.jpg" height="112" width="72"/>
+               </a>
+           </li>
+
+           <li  class="item">
+               <a href="#Paradox" data-toggle="tab" id="Paradox_active" onclick="show06()">
+                   <img src="../../img/Y-Paradox.jpg" height="112" width="72"/>
+               </a>
+           </li>
+           <li  class="item">
+               <a href="#WolfWarriors2" data-toggle="tab" id="WolfWarriors2_active" onclick="show07()">
+                   <img src="../../img/Y-WolfWarriors2.jpg" height="112" width="72"/>
+               </a>
+           </li>
+       </ul>
+
+        <!--电影信息-->
+        <div id="movieContent" class="tab-content">
+            <!--蜘蛛侠-->
+            <div class="tab-pane fade in active" id="spiderman">
+                <p class="title">蜘蛛侠：英雄归来<span>8<sup>.0</sup></span></p>
+                <p class="type">动作,幻,冒险,科幻</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a1" data-toggle="tab">今天09月13日</a></li>
+                    <li><a href="#a2" data-toggle="tab">明天09月14日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule01" class="tab-content">
+
+                    <div class="tab-pane fade in active" id="a1">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a2">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--银魂-->
+            <div class="tab-pane fade" id="Gintama">
+                <p class="title">银魂<span>7<sup>.0</sup></span></p>
+                <p class="type"> 剧情,喜剧</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a3" data-toggle="tab">今天09月13日</a></li>
+                    <li><a href="#a4" data-toggle="tab">明天09月14日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule02" class="tab-content">
+
+                    <div class="tab-pane fade in active" id="a3">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a4">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--敦刻尔克-->
+            <div class="tab-pane fade" id="Dunkirk">
+                <p class="title">敦刻尔克<span>8<sup>.2</sup></span></p>
+                <p class="type"> 剧情,动作,战争</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a5" data-toggle="tab">今天09月13日</a></li>
+                    <li><a href="#a6" data-toggle="tab">明天09月14日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule03" class="tab-content">
+
+                    <div class="tab-pane fade in active" id="a5">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a6">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--猩球崛起-->
+            <div class="tab-pane fade" id="WarOfThePlanet">
+                <p class="title">猩球崛起3：终极之战<span>7<sup>.0</sup></span></p>
+                <p class="type"> 剧情,动作,冒险,科幻</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a7" data-toggle="tab">明天09月14日</a></li>
+                    <li><a href="#a8" data-toggle="tab">后天09月15日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule04" class="tab-content">
+                    <div class="tab-pane fade in active" id="a7">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a8">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--星际特工-->
+            <div class="tab-pane fade" id="Valerian">
+                <p class="title">星际特工：千星之城<span>8<sup>.3</sup></span></p>
+                <p class="type"> 冒险,科幻</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a9" data-toggle="tab">今天09月13日</a></li>
+                    <li><a href="#a10" data-toggle="tab">后天09月15日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule05" class="tab-content">
+                    <div class="tab-pane fade in active" id="a9">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a10">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--杀破狼-->
+            <div class="tab-pane fade" id="Paradox">
+                <p class="title">杀破狼·贪狼<span>8<sup>.4</sup></span></p>
+                <p class="type"> 剧情,动作</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a11" data-toggle="tab">明天09月14日</a></li>
+                    <li><a href="#a12" data-toggle="tab">后天09月15日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule06" class="tab-content">
+                    <div class="tab-pane fade in active" id="a11">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a12">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--战狼2-->
+            <div class="tab-pane fade" id="WolfWarriors2">
+                <p class="title">战狼2<span>9<sup>.4</sup></span></p>
+                <p class="type"> 动作,战争</p>
+
+                <!--日期-->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#a13" data-toggle="tab">今天09月13日</a></li>
+                    <li><a href="#a14" data-toggle="tab">明天09月14日</a></li>
+                </ul>
+
+                <!--场次-->
+                <div id="schedule07" class="tab-content">
+
+                    <div class="tab-pane fade in active" id="a13">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>10:40</b></h4><p class="sc">12:53散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>11:20</b></h4><p class="sc">13:33散场</p></td>
+                                <td><h5 class="lang">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:00</b></h4><p class="sc">14:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:50</b></h4><p class="sc">15:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:55</b></h4><p class="sc">16:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>14:35</b></h4><p class="sc">16:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥90</h5><s>￥150</s></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="a14">
+                        <table>
+                            <tr>
+                                <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>12:40</b></h4><p class="sc">14:53散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>4号VIP厅</p></td>
+                                <td><h5 class="jq">￥115</h5><s>￥150</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:20</b></h4><p class="sc">15:33散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:00</b></h4><p class="sc">15:13散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>13:50</b></h4><p class="sc">16:03散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>16:55</b></h4><p class="sc">18:08散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="sj"><b>18:35</b></h4><p class="sc">20:48散场</p></td>
+                                <td><h5 class="sj">英语/3D</h5><p>6号厅</p></td>
+                                <td><h5 class="jq">￥50</h5><s>￥90</s></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="slider1" class="swipe">
-    <ul class="box_list">
-        <li class="box01"></li>
-        <li class="box02"></li>
-        <li class="box03"></li>
-        <li class="box04"></li>
-        <li class="box05"></li>
-        <li class="box06"></li>
-        <li class="box07"></li>
-    </ul>
-</div>
+<script src="../js/movieschedule.js"></script>
 </body>
-<script>
-
-</script>
 </html>
