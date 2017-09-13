@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>电影详情页</title>
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/cinema_detail.css">
+
+</head>
+<body>
+<header class="navbar navbar-default" id="header">
+    <a  class="back" href="#"><img class="back_img" src="../../img/headerback_3.png"></a>
+    <span class="cinema_headname"><b>哈艺时尚影城-天河科韵店</b></span>
+    <div id="btn">
+        <div class="dropdown">
+            <img src="../../img/header03.png" height="50px" width="55px" class="dropdown-toggle" id="drop" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="true">
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="drop">
+                <li><a href="#"><img src="../../img/房子.png" height="20px" width="20px"/>&nbsp;首页</a></li>
+                <li><a href="#"><img src="../../img/人.png" height="20px" width="20px"/>&nbsp;个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container" id="container">
+    <div id="detail">
+        <span class="cinema_name"><b>哈艺时尚影城-天河科韵店</b></span>
+        <a href="#"><img src="../../img/cinema_adress.gif"></a>
+        <p>地址：天河棠下天盈建博汇建材市场1楼</p>
+        <p class="tel">电话：<i>020-392330123</i></p>
+    </div>
+    <hr>
+    <div id="main">
+        <div id="feature">
+            <h5 class="feature_title"><b>特色</b></h5>
+            <p>广州首家全部采用NEC激光放映设备的影院</p>
+        </div>
+        <div id="service">
+            <h5 class="service_title"><b>服务</b></h5>
+            <div style="overflow: hidden">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="list_head" id="list_head_goods">卖品</dt>
+                            <dd class="list_content">爆米花、可乐等</dd>
+                        </dl>
+                        <dl>
+                            <dt class="list_head" id="list_head_glasses">3D眼镜</dt>
+                            <dd class="list_content">免押金</dd>
+                        </dl>
+                        <dl>
+                            <dt class="list_head" id="list_head_bus">公交</dt>
+                            <dd class="list_content">86 252 310 382 565</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="list_head" id="list_head_foods">餐饮</dt>
+                            <dd class="list_content">仙庙烧鸡、重庆火锅</dd>
+                            <dt class="list_head" id="list_head_shop">购物</dt>
+                            <dd class="list_content">7-11便利</dd>
+                            <dt class="list_head" id="list_head_children">儿童票</dt>
+                            <dd class="list_content">IMAX厅及其它特殊厅1.3米以下的儿童均需购买儿童票</dd>
+                        </dl>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div id="wala">
+            <h5 class="wala_title"><b>哇啦</b></h5>
+            <input id="click_more" type="button" value="点击加载更多">
+        </div>
+        <br><br><br>
+    </div>
+</div>
+</body>
+</html>
+
