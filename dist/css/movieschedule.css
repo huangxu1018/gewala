@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  border: none;
   background-color: #f3f3f3;
 }
 /*顶部栏*/
@@ -15,8 +17,7 @@
   display: inline-block;
   line-height: 46px;
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
 }
 .dropdown {
   float: right;
@@ -28,6 +29,10 @@
   margin: 0;
   border-radius: 0;
   min-width: 10%;
+}
+.dropdown .dropdown-menu li,
+.dropdown .dropdown-menu img {
+  background-color: #f2620f;
 }
 .dropdown .dropdown-menu a:hover {
   background-color: #f26522 ;
