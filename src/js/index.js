@@ -1,27 +1,50 @@
 /**
  * Created by huangx des DATE 2017/9/6.TIME 17:09.
  */
+var district=document.getElementById('district');
+var feature=document.getElementById('feature');
+var timing=document.getElementById('timing');
+var district_active=document.getElementById('district_active');
+var feature_active=document.getElementById('feature_active');
+var timing_active=document.getElementById('timing_active');
 function show(){
-    var a=document.getElementById('district');
-    if( a.style.display==""|| a.style.display=="none"){
-        a.style.display = "block";
+    if( district.style.display==""|| district.style.display=="none"){
+        district.style.display = "block";
+        feature.style.display = "none";
+        timing.style.display = "none";
+        district_active.style.color="#F36523";
+        feature_active.style.color="black";
+        timing_active.style.color="black";
     }else{
-        a.style.display = "none";}
-
+        district.style.display = "none";
+        district_active.style.color="black";
+    }
 }
 function show1(){
-    var b=document.getElementById('feature');
-    if( b.style.display==""|| b.style.display=="none"){
-        b.style.display = "block";
+    if( feature.style.display==""|| feature.style.display=="none"){
+        feature.style.display = "block";
+        district.style.display = "none";
+        timing.style.display = "none";
+        district_active.style.color="black";
+        feature_active.style.color="#F36523";
+        timing_active.style.color="black";
     }else{
-        b.style.display = "none";}
+        feature.style.display = "none";
+        feature_active.style.color="black";
+    }
 }
 function show2(){
-    var c=document.getElementById('timing');
-    if( c.style.display==""|| c.style.display=="none"){
-        c.style.display = "block";
+    if( timing.style.display==""|| timing.style.display=="none"){
+        timing.style.display = "block";
+        district.style.display = "none";
+        feature.style.display = "none";
+        timing_active.style.color="#F36523";
+        district_active.style.color="black";
+        feature_active.style.color="black";
     }else{
-        c.style.display = "none";}
+        timing.style.display = "none";
+        timing_active.style.color="black";
+    }
 }
 (function (angular) {
     var hotModule = angular.module('myapp', ['ngRoute']);
