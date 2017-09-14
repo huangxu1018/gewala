@@ -6,11 +6,35 @@
  * Created by Administrator on 2017/9/12.
  */
 
+(function (angular) {
+    var hotModule = angular.module('myapp', ['ngRoute']);
+    hotModule
+        .controller('HotController', ["$scope", "$http",
+            function ($scope, $http) {
+                window.doubanMovieCallback = function (data) {
+                    if (data.msg) {
+                        //返回错误信息
+                        $scope.message = data.msg;
+                    } else {
+                        $scope.movies = data;
+                        $scope.message = '';
+                    }
+                };
+                //网络请求地址
+                var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
+                $http.jsonp(url).error(function () {
+
+                });
+
+            }]);
+
+})(angular);
+
 /**
  * 评论列表
  * */
-var app = angular.module('commentApp',[]);
-app.controller("commentCtrl",function ($scope) {
+var app = angular.module('moviedetailApp',[]);
+app.controller("moviedetailCtrl",function ($scope) {
     $scope.lists = [
         {
             head_img:"../../img/default_head.png",

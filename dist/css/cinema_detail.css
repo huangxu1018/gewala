@@ -45,6 +45,9 @@ body {
   margin-top: -20px;
   background-color: #F3F3F3;
 }
+#detail {
+  margin-top: 12px;
+}
 #detail .cinema_name {
   font-size: 18px;
   margin-bottom: 4px;
@@ -61,7 +64,7 @@ body {
   border-left: 5px solid #F26522;
 }
 #main #service ul {
-  width: 1350px;
+  width: 330px;
   margin-left: -45px;
 }
 #main #service ul li {
@@ -98,11 +101,13 @@ body {
   border-left: 5px solid #F0C50B;
   background: url("../../img/foods.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_shop {
+#list_head_shop,
+#list_head_shop02 {
   border-left: 5px solid #FF6600;
   background: url("../../img/shop.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_children {
+#list_head_children,
+#list_head_children02 {
   border-left: 5px solid #5DCD35;
   background: url("../../img/children.gif") no-repeat #FEFEFE 10px 2px;
 }
