@@ -20,105 +20,6 @@
 
     <title>Title</title>
     <style>
-        /*影院信息*/
-        #detial{
-            height:69px;
-            width:100%;
-            border-bottom: dashed 1px #cccccc;
-        }
-        #detial a{
-            display: inline-block;
-            color:#000000;
-            margin: 12px 21px 0;
-        }
-        #detial div{
-            float: left;
-            height:66px
-        }
-        #link_detial img{
-            margin-bottom: 23px;
-        }
-        /*电影展示图*/
-        .movie_nav{
-            width:95%;
-            height: 191px;
-            margin-left: 2.5%;
-            border-bottom:dashed 1px #cccccc;
-        }
-        #owl-demo .item {
-            margin: 3px;
-        }
-        #myTab{
-            width: 100%;
-            height: 112px;
-            margin-top: 2px;
-        }
-        #myTab li{
-            width:100%;
-            height:112px;
-            margin-top: 2px;
-        }
-
-        #owl-demo .item img {
-            display: block;
-            width: 100%;
-            height:100%;
-        }
-        /*电影信息*/
-        .nav-tabs{
-            width:100%;
-            height: 51px;
-            border-top: 1px solid #cccccc;
-            border-bottom: 1px solid #cccccc;
-        }
-        .nav-tabs li,.nav-tabs li a{
-            width:121px;
-            height:36px;
-            margin-top: 3px;
-            color:#000000;
-        }
-        #movieContent .title{
-            margin-left: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            color:#4d4d4d;
-        }
-        #movieContent .type{
-            margin-left: 8px;
-            color:#8e8e8e;
-        }
-        #movieContent .title span{
-            color:#f26422;
-            font-weight: bold;
-            margin-left: 15px;
-        }
-        /*时间场次*/
-        table{
-            width: 100%;
-        }
-        td{
-            padding-left: 5%;
-            padding-right:5%;
-        }
-        .jq{
-            color: #f26422;
-            font-weight: bold;
-        }
-        .sc{
-            border-radius: 15px;
-            background-color:#d8d8d8;
-            width: 70px;
-            text-align: center;
-            font-size: 11px;
-            margin-left: -5px;
-        }
-        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-            color:#FFFFFF;
-            cursor: default;
-            border: 1px solid #ddd;
-            background-color: #FF5722;
-            border-radius: 22px;
-        }
 
     </style>
 
@@ -152,51 +53,51 @@
 </div>
 
 <!--电影展示图-->
-<div class="">
+<div class="movie_imgs">
     <!--图片列表-->
     <div class="movie_nav">
-       <ul id="myTab" class="owl-carousel owl-theme tabs">
-           <li  class="item">
+       <div id="myTab" class="owl-carousel owl-theme tabs">
+           <div  class="item">
                <a href="#spiderman" data-toggle="tab" id="spiderman_active" onclick="show01()">
                   <img src="../../img/Y-spiderman.jpg" height="112" width="72"/>
                </a>
-           </li>
+           </div>
 
-           <li  class="item">
+           <div  class="item">
                <a href="#Gintama" data-toggle="tab"  id="Gintama_active" onclick="show02()">
                    <img src="../../img/Y-Gintama.jpg" height="112" width="72"/>
                </a>
-           </li>
+           </div>
 
-           <li  class="item">
+           <div  class="item">
                <a href="#Dunkirk" data-toggle="tab" id="Dunkirk_active" onclick="show03()">
                    <img src="../../img/Y-Dunkirk.jpg" height="112" width="72"/>
                </a>
-           </li>
+           </div>
 
-           <li  class="item">
+           <div  class="item">
                <a href="#WarOfThePlanet" data-toggle="tab" id="WarOfThePlanet_active" onclick="show04()">
                    <img src="../../img/Y-WarOfThePlanet.jpg" height="112" width="72"/>
                </a>
-           </li>
+           </div>
 
-           <li  class="item">
+           <div  class="item">
                <a href="#Valerian" data-toggle="tab" id="Valerian_active" onclick="show05()">
                    <img src="../../img/Y-Valerian.jpg" height="112" width="72"/>
                </a>
-           </li>
+           </div>
 
-           <li  class="item">
+           <div  class="item">
                <a href="#Paradox" data-toggle="tab" id="Paradox_active" onclick="show06()">
                    <img src="../../img/Y-Paradox.jpg" height="112" width="72"/>
                </a>
-           </li>
-           <li  class="item">
+           </div>
+           <div  class="item">
                <a href="#WolfWarriors2" data-toggle="tab" id="WolfWarriors2_active" onclick="show07()">
                    <img src="../../img/Y-WolfWarriors2.jpg" height="112" width="72"/>
                </a>
-           </li>
-       </ul>
+           </div>
+       </div>
 
         <!--电影信息-->
         <div id="movieContent" class="tab-content">
@@ -354,7 +255,7 @@
                                 <td><h5 class="jq">￥50</h5><s>￥90</s></td>
                             </tr>
                         </table>
-                        </a>
+
                     </div>
                     <div class="tab-pane fade" id="a4">
                         <table>
