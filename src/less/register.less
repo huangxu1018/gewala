@@ -17,6 +17,7 @@
   text-align: center;
   font-size: 16px;
 }
+
 /*注册输入框*/
 .form-group{
   position: relative;
@@ -27,9 +28,10 @@
   width:95%;
   margin-left: 2.5%;
 }
+
 .form-group img{
   float: left;
-  display: inline-block;
+  display: inline;
   margin-top: 12px;
 }
 .form-group input{
@@ -38,8 +40,30 @@
   border: none;
   width: 78%;
   margin-left: 10px;
-  display: inline-block;
+  display: inline;
 }
+//验证码
+#cod{
+  width:80%;
+}
+#code{
+  font-style:italic;
+  font-weight:bold;
+  border: 2px solid #c7c5c5;
+  letter-spacing:2px;
+  color:blue;
+  width: 70px;
+  height: 32px;
+  position: absolute;
+  right: 15px;
+  top: 6px;
+}
+//提示
+.hint{
+  margin-left: 20px;
+}
+
+//按钮
 .sigin_btn{
   background-color: #f26422;
   color: #FFFFFF;
@@ -48,6 +72,7 @@
   border-radius: 4px;
   border: 3px solid #FFFFFF;
 }
+//登录
 .tar{
   text-align: right;
   margin: 7px 10px 10px;
