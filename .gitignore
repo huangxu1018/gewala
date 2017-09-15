@@ -1,4 +1,9 @@
 /node_modules
 /bower_components
+<<<<<<< HEAD
 /.idea
 /package-lock.json
+=======
+/package-lock.json
+/.idea
+>>>>>>> cd5e65ffb102f4a1cd4b38c74299ac910ff93802
