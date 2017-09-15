@@ -17,12 +17,12 @@
   display: inline-block;
   line-height: 46px;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 .dropdown {
   float: right;
 }
-.dropdown .dropdown-menu {
+.dropdown-menu {
   background-color: #f2620f;
   height: 85px;
   border: #f2620f;
@@ -30,11 +30,11 @@
   border-radius: 0;
   min-width: 10%;
 }
-.dropdown .dropdown-menu li,
-.dropdown .dropdown-menu img {
+.dropdown-menu li,
+.dropdown-menu img {
   background-color: #f2620f;
 }
-.dropdown .dropdown-menu a:hover {
+.dropdown-menu a:hover {
   background-color: #f26522 ;
 }
 /*影院信息*/
@@ -55,37 +55,10 @@
 #link_detial img {
   margin-bottom: 23px;
 }
-/*电影展示图*/
-.movie_nav {
-  width: 95%;
-  height: 191px;
-  margin-left: 2.5%;
-  border-bottom: dashed 1px #cccccc;
-}
-#owl-demo .item {
-  margin: 3px;
-}
-#myTab {
-  width: 100%;
-  height: 112px;
-  margin-top: 2px;
-}
-#myTab li {
-  width: 100%;
-  height: 112px;
-  margin-top: 2px;
-}
-#owl-demo .item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 /*电影信息*/
 .nav-tabs {
   width: 100%;
   height: 51px;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
 }
 .nav-tabs li,
 .nav-tabs li a {
@@ -93,16 +66,6 @@
   height: 36px;
   margin-top: 3px;
   color: #000000;
-}
-#movieContent .title {
-  margin-left: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #4d4d4d;
-}
-#movieContent .type {
-  margin-left: 8px;
-  color: #8e8e8e;
 }
 #movieContent .title span {
   color: #f26422;
@@ -136,5 +99,6 @@ td {
   cursor: default;
   border: 1px solid #ddd;
   background-color: #FF5722;
+  border-bottom-color: transparent;
   border-radius: 22px;
 }

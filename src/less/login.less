@@ -48,7 +48,7 @@
 
 .form-group img{
   float: left;
-  display: inline-block;
+  display: inline;
   margin-top: 12px;
 }
 
@@ -58,15 +58,38 @@
   border: none;
   width: 78%;
   margin-left: 10px;
-  display: inline-block;
+  display: inline;
 }
+//提示
+.hint{
+  margin-left: 25px;
+}
+//验证码
+#cod{
+  width:80%;
+}
+#code{
+  font-style:italic;
+  font-weight:bold;
+  border: 2px solid #c7c5c5;
+  letter-spacing:2px;
+  color:blue;
+  width: 70px;
+  height: 32px;
+  position: absolute;
+  right: 15px;
+  top: 6px;
+}
+//按钮
 .login_btn{
   background-color: #f26422;
   color: #FFFFFF;
-  width: 100%;
+  width: 95%;
   height: 46px;
   border-radius: 4px;
   border: 3px solid #FFFFFF;
+  margin-left:2.5%;
+  margin-right:2.5%;
 }
 .signin_a{
   color: #f26422;
@@ -74,9 +97,7 @@
   text-indent: 20px;
   display: block;
 }
-#username,#password,#code{
-  color:red;
-}
+
 /*第三方登陆*/
 #login_third{
   width:100%;
@@ -86,6 +107,9 @@
   color: #8d8d8d;
   text-align: center;
   width:100%;
+}
+p {
+  margin:0;
 }
 #login_third01{
   text-align: center;
