@@ -11,7 +11,7 @@ var app = angular.module("mainApp",[
     // "indexPage",
     // "moviedetailPage"
 ]);
-app.config("$routeProvider",function ($routeProvider) {
+app.config(["$routeProvider",function ($routeProvider) {
     $routeProvider
         .when("/",{
             templateUrl: "src/main/main.html",
@@ -26,5 +26,5 @@ app.config("$routeProvider",function ($routeProvider) {
         //     controller:"moviedetailCtrol"
         // })
         .otherwise({redirectTo: "/"});
-});
+}]);
 
