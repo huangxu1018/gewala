@@ -6,7 +6,7 @@
  * Created by Administrator on 2017/9/15.
  */
 
-var homeApp = angular.module("homePage",[]);
-homeApp.controller("homeCtrol",function ($scope) {
+var homeApp = angular.module("homePage", ["ngRoute"]);
+homeApp.controller("homeCtrol", function ($scope) {
     $scope.shouye = "你好";
 });
