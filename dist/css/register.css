@@ -29,7 +29,7 @@
 }
 .form-group img {
   float: left;
-  display: inline-block;
+  display: inline;
   margin-top: 12px;
 }
 .form-group input {
@@ -38,7 +38,25 @@
   border: none;
   width: 78%;
   margin-left: 10px;
-  display: inline-block;
+  display: inline;
+}
+#cod {
+  width: 80%;
+}
+#code {
+  font-style: italic;
+  font-weight: bold;
+  border: 2px solid #c7c5c5;
+  letter-spacing: 2px;
+  color: blue;
+  width: 70px;
+  height: 32px;
+  position: absolute;
+  right: 15px;
+  top: 6px;
+}
+.hint {
+  margin-left: 20px;
 }
 .sigin_btn {
   background-color: #f26422;

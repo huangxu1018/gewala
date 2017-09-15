@@ -26,7 +26,7 @@ gulp.task("minify-html",function () {
 gulp.task("myless",function () {
     gulp.src("src/less/*.less")
         .pipe(less())
-        .pipe(gulp.dest("./dist/css"))
+        .pipe(gulp.dest("./dist/css/"))
         .pipe(reload({stream:true}))
 });
 gulp.task("serve",["myless"],function () {

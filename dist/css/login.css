@@ -30,7 +30,7 @@
   border-bottom: solid 2px #f26422;
 }
 #login a {
-  line-height: 46px;
+  line-height: 50px;
   font-size: 16px;
   color: #f26422;
 }
@@ -46,7 +46,7 @@
 }
 .form-group img {
   float: left;
-  display: inline-block;
+  display: inline;
   margin-top: 12px;
 }
 .form-group input {
@@ -55,26 +55,41 @@
   border: none;
   width: 78%;
   margin-left: 10px;
-  display: inline-block;
+  display: inline;
+}
+.hint {
+  margin-left: 25px;
+}
+#cod {
+  width: 80%;
+}
+#code {
+  font-style: italic;
+  font-weight: bold;
+  border: 2px solid #c7c5c5;
+  letter-spacing: 2px;
+  color: blue;
+  width: 70px;
+  height: 32px;
+  position: absolute;
+  right: 15px;
+  top: 6px;
 }
 .login_btn {
   background-color: #f26422;
   color: #FFFFFF;
-  width: 100%;
+  width: 95%;
   height: 46px;
   border-radius: 4px;
   border: 3px solid #FFFFFF;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 .signin_a {
   color: #f26422;
   text-decoration: none;
   text-indent: 20px;
   display: block;
-}
-#username,
-#password,
-#code {
-  color: red;
 }
 /*第三方登陆*/
 #login_third {
@@ -85,10 +100,13 @@
   text-align: center;
   width: 100%;
 }
+p {
+  margin: 0;
+}
 #login_third01 {
   text-align: center;
 }
 #login_third01 a {
   width: 80px;
-  height: 50px;
+  height: 46px;
 }

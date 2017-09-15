@@ -1,39 +1,50 @@
 /**
  * Created by huangx des DATE 2017/9/6.TIME 17:09.
  */
-var a_district = document.getElementById("district");
-var b_district = document.getElementById('feature');
-var district_text = document.getElementById("district_text");
-var feature_text = document.getElementById("feature_text");
 
-function show() {
-    if (a_district.style.display == "" || a_district.style.display == "none") {
-        a_district.style.display = "block";
-        b_district.style.display = "none";
-        district_text.style.color = "red";
-        feature_text.style.color = "black";
-    } else {
-        a_district.style.display = "none";
-        district_text.style.color = "black";
+var district=document.getElementById('district');
+var feature=document.getElementById('feature');
+var timing=document.getElementById('timing');
+var district_active=document.getElementById('district_active');
+var feature_active=document.getElementById('feature_active');
+var timing_active=document.getElementById('timing_active');
+function show(){
+    if( district.style.display==""|| district.style.display=="none"){
+        district.style.display = "block";
+        feature.style.display = "none";
+        timing.style.display = "none";
+        district_active.style.color="#F36523";
+        feature_active.style.color="black";
+        timing_active.style.color="black";
+    }else{
+        district.style.display = "none";
+        district_active.style.color="black";
     }
 }
-function show1() {
-    if (b_district.style.display == "" || b_district.style.display == "none") {
-        b_district.style.display = "block";
-        a_district.style.display = "none";
-        feature_text.style.color = "red";
-        district_text.style.color = "black";
-    } else {
-        b_district.style.display = "none";
-        feature_text.style.color = "black";
+function show1(){
+    if( feature.style.display==""|| feature.style.display=="none"){
+        feature.style.display = "block";
+        district.style.display = "none";
+        timing.style.display = "none";
+        district_active.style.color="black";
+        feature_active.style.color="#F36523";
+        timing_active.style.color="black";
+    }else{
+        feature.style.display = "none";
+        feature_active.style.color="black";
     }
 }
-function show2() {
-    var c = document.getElementById('timing');
-    if (c.style.display == "" || c.style.display == "none") {
-        c.style.display = "block";
-    } else {
-        c.style.display = "none";
+function show2(){
+    if( timing.style.display==""|| timing.style.display=="none"){
+        timing.style.display = "block";
+        district.style.display = "none";
+        feature.style.display = "none";
+        timing_active.style.color="#F36523";
+        district_active.style.color="black";
+        feature_active.style.color="black";
+    }else{
+        timing.style.display = "none";
+        timing_active.style.color="black";
     }
 }
 (function (angular) {

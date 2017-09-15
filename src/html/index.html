@@ -31,55 +31,64 @@
 
 <nav class="menu">
     <ul class="nav nav-tabs">
-        <li><a href="#movie" data-toggle="tab" id="movie_active">电影</a></li>
+        <li class="active"><a href="#movie" data-toggle="tab" id="movie_active">电影</a></li>
         <li><a href="#cinema" data-toggle="tab" id="movie_home">影院</a></li>
     </ul>
 </nav>
 <div id="tab" class="tab-content">
-    <!---电影--->
-    <div class="tab-pane fade in active" id="movie" ng-controller="HotController">
-        <p class="sp">正在售票</p>
-        <div class="list-group">
-            <a class="list-group-item" ng-repeat="item in movies.subjects">
-                <span class="badge">{{item.rating.average}}</span>
-                <div class="media">
-                    <div class="meida-left">
-                        <img ng-src="{{item.images.small}}" class="media-object">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">{{item.title}}</h3>
-                        <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span>
-                        </div>
-                        <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
-                        <p>类型：<span>{{item.genres.join('、')}}</span></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="btn1">
-            <button type="button">更多热映影片</button>
-        </div>
-        <p class="sp">即将上映</p>
-        <div class="list-group">
-            <a class="list-group-item" ng-repeat="item in movies.subjects">
-                <span class="badge">{{item.rating.average}}</span>
-                <div class="media">
-                    <div class="meida-left">
-                        <img ng-src="{{item.images.small}}" class="media-object">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">{{item.title}}</h3>
-                        <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span>
-                        </div>
-                        <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
-                        <p>类型：<span>{{item.genres.join('、')}}</span></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="btn1">
-            <button type="button">更多即将上映影片</button>
-        </div>
+
+ <!---电影--->
+  <div class="tab-pane fade in active" id="movie" ng-controller="HotController">
+      <p class="sp">正在售票</p>
+      <div class="list-group">
+          <a class="list-group-item" ng-repeat="item in movies.subjects">
+              <span class="badge">{{item.rating.average}}</span>
+              <div class="media">
+                  <div class="meida-left">
+                      <img ng-src="{{item.images.small}}" class="media-object">
+                  </div>
+                  <div class="media-body">
+                      <h3 class="media-heading">{{item.title}}</h3>
+                      <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
+                      <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
+                      <p>类型：<span>{{item.genres.join('、')}}</span></p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="btn1">
+          <button type="button">更多热映影片</button>
+      </div>
+      <p class="sp">即将上映</p>
+      <div class="list-group">
+          <a class="list-group-item" ng-repeat="item in movies.subjects">
+              <span class="badge">{{item.rating.average}}</span>
+              <div class="media">
+                  <div class="meida-left">
+                      <img ng-src="{{item.images.small}}" class="media-object">
+                  </div>
+                  <div class="media-body">
+                      <h3 class="media-heading">{{item.title}}</h3>
+                      <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
+                      <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="btn1">
+          <button type="button">更多即将上映影片</button>
+      </div>
+  </div>
+
+<!---影院--->
+  <div class="tab-pane fade" id="cinema">
+    <div class="screening">
+        <ul class="nav nav-tabs">
+            <li><a href="#district" data-toggle="tab" onclick="show()" id="district_active"><img src="../../img/address.png" height="20" width="20"/>&nbsp;区域</a></li>
+            <li><a href="#feature" data-toggle="tab" onclick="show1()" id="feature_active"><img src="../../img/loudou.png" height="20" width="20"/>&nbsp;特色</a></li>
+            <li><a href="#"><img src="../../img/search.png" height="20" width="20"/>&nbsp;搜索影院</a></li>
+        </ul>
+
     </div>
 
     <!---影院--->
@@ -272,6 +281,9 @@
         </div>
     </div>
 </div>
+
+</div>
+
 <script src="../js/index.js"></script>
 </body>
 </html>
