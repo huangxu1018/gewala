@@ -1,7 +1,7 @@
 body {
   font-family: 楷体;
 }
-#header {
+#c_header {
   width: 100%;
   height: 46px;
   background-color: #f26522;
@@ -9,37 +9,37 @@ body {
   position: relative;
   text-align: center;
 }
-#header a {
+#c_header a {
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
-#header .retu {
+#c_header .c_retu {
   position: absolute;
   left: 0px;
   top: 0px;
   padding-left: 5%;
 }
-#header .cinema_headname {
+#c_header .c_headname {
   font-size: 18px;
   color: white;
 }
-#header label {
+#c_header label {
   position: absolute;
   top: 0px;
   right: 5%;
 }
-.screening {
+.c_screening {
   width: 100%;
   text-align: center;
 }
-.screening li {
+.c_screening li {
   width: 33%;
 }
-.screening li a {
+.c_screening li a {
   color: black;
 }
-.screening .nav li a:hover {
+.c_screening .nav li a:hover {
   color: #F36523 ;
   background-color: white;
 }
@@ -56,54 +56,54 @@ body {
   background-color: white;
   border: none;
 }
-#mycontent {
+#c_mycontent {
   width: 100%;
   position: relative;
   z-index: 10;
 }
-#mycontent #timing {
+#c_mycontent #c_timing {
   height: 200px;
   overflow: auto;
   z-index: 10;
   width: 100%;
 }
-#mycontent #timing ul {
+#c_mycontent #c_timing ul {
   padding-left: 0px;
 }
-#mycontent #timing ul li {
+#c_mycontent #c_timing ul li {
   padding-left: 20px;
   border-bottom: 1px solid #EEEEEE;
   height: 40px;
   line-height: 40px;
 }
-#mycontent #timing ul li a {
+#c_mycontent #c_timing ul li a {
   text-decoration: none;
   color: black;
 }
-#mycontent .tab-content ul li {
+#c_mycontent .tab-content ul li {
   list-style-type: none;
   border-bottom: 1px solid #EEEEEE;
   height: 40px;
   line-height: 40px;
 }
-#mycontent .tab-content ul li a {
+#c_mycontent .tab-content ul li a {
   text-decoration: none;
   color: black;
 }
-#mycontent .tx {
+#c_mycontent .c_tx {
   width: 40%;
   position: absolute;
   background-color: #e9ecee;
 }
-#mycontent .tx .nav-stacked {
+#c_mycontent .c_tx .nav-stacked {
   height: 200px;
 }
-#mycontent .tx .active {
+#c_mycontent .c_tx .active {
   background-color: white;
   border-left: 3px solid #f26522;
 }
-#mycontent #mycontent1,
-#mycontent #mycontent2 {
+#c_mycontent #c_mycontent1,
+#c_mycontent #c_mycontent2 {
   width: 60%;
   position: absolute;
   top: 0px;
@@ -112,55 +112,55 @@ body {
   height: 200px;
   overflow: auto;
 }
-#mycontent #mycontent1 ul,
-#mycontent #mycontent2 ul {
+#c_mycontent #c_mycontent1 ul,
+#c_mycontent #c_mycontent2 ul {
   padding-left: 0px;
 }
-#mycontent #mycontent1 ul li,
-#mycontent #mycontent2 ul li {
+#c_mycontent #c_mycontent1 ul li,
+#c_mycontent #c_mycontent2 ul li {
   padding-left: 20px;
 }
-#box {
+#c_box {
   width: 100%;
   z-index: 7;
 }
-#box .cinema {
+#c_box .c_cinema {
   border-bottom: 1px solid #beb7b6;
   height: 120px;
 }
-#box .cinema .mycinema {
+#c_box .c_cinema .c_mycinema {
   padding-top: 18px;
 }
-#box .cinema .mycinema a {
+#c_box .c_cinema .c_mycinema a {
   text-decoration: none;
   color: black;
 }
-#box .cinema .mycinema a .theater {
+#c_box .c_cinema .c_mycinema a .c_theater {
   font-size: 17px;
   padding-right: 5%;
   padding-left: 5%;
   padding-bottom: 4px;
 }
-#box .cinema .mycinema a span {
+#c_box .c_cinema .c_mycinema a span {
   float: right;
   color: #f26522;
 }
-#box .cinema .mycinema a p {
+#c_box .c_cinema .c_mycinema a p {
   padding-right: 5%;
   padding-left: 5%;
   font-size: 15px ;
 }
-#box .cinema .mycinema a .myp {
+#c_box .c_cinema .c_mycinema a .c_myp {
   color: #9b9f98;
   font-size: 13px;
   margin-top: 15px;
 }
-#mybtn {
+#c_mybtn {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 10px;
 }
-#mybtn button {
+#c_mybtn button {
   border: 1px solid #9b9f98;
   background-color: white;
   width: 100%;

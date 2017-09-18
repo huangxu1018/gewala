@@ -1,5 +1,5 @@
 
-<div id="header">
+<div id="mo_header">
     <img src="img/LOGO.png" height="35px" width="90px"/>
     <label><a href="#/city">&nbsp;广州<img src="img/header02.png" height="22px" width="25px"/></a></label>
     <div class="dropdown">
@@ -12,15 +12,15 @@
     </div>
 </div>
 
-<nav class="menu">
+<nav class="mo_menu">
     <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
         <li ng-class="{active: vm.activeTab == 1}" ng-click="vm.activeTab = 1"><a data-toggle="tab">电影</a></li>
         <li ng-class="{active: vm.activeTab == 2}" ng-click="vm.activeTab = 2"><a  data-toggle="tab" >影院</a></li>
     </ul>
 </nav>
-<div id="tab" class="tab-content">
+<div id="mo_tab" class="tab-content">
     <!---电影--->
-    <div ng-show="vm.activeTab == 1">
+    <div ng-show="vm.activeTab == 1" id="movie">
         <p class="sp">正在售票</p>
         <div class="list-group">
             <a class="list-group-item" ng-repeat="item in movies.subjects" href="#/moviedetail/{{item.title}}">

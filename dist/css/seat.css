@@ -1,7 +1,7 @@
 body {
   font-family: 楷体;
 }
-#header {
+#s_header {
   width: 100%;
   height: 46px;
   background-color: #f26522;
@@ -9,33 +9,33 @@ body {
   position: relative;
   text-align: center;
 }
-#header .retu {
+#s_header .retu {
   position: absolute;
   left: 0px;
   top: 0px;
   padding-left: 8%;
   padding-right: 5%;
 }
-#header .retu a {
+#s_header .retu a {
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
-#header .cinema_headname {
+#s_header .cinema_headname {
   font-size: 18px;
   color: white;
 }
-.main {
+.s_main {
   background-color: gray;
   height: 480px;
   color: white;
 }
-.main .titl {
+.s_main .titl {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.main .ym {
+.s_main .ym {
   font-size: 17px;
   border-right: 1px solid white;
   border-left: 1px solid white;
@@ -44,12 +44,12 @@ body {
   padding-top: 5px;
   height: 33px;
 }
-.main .contain {
+.s_main .contain {
   padding-top: 20px;
   text-align: center;
   position: relative;
 }
-.main .contain .left {
+.s_main .contain .left {
   background-color: #9d9fa0;
   border-radius: 25px;
   width: 7%;
@@ -57,40 +57,40 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.main .contain .left ul li {
+.s_main .contain .left ul li {
   list-style-type: none;
   margin-bottom: 16px;
 }
-.main .contain .right {
+.s_main .contain .right {
   width: 90%;
   position: absolute;
   right: 0px;
   top: 20px;
   overflow: auto;
 }
-.main .contain .right table tr td img {
+.s_main .contain .right table tr td img {
   margin-right: 10px;
   margin-bottom: 16px;
 }
-.footer {
+.s_footer {
   width: 100%;
   padding-left: 4%;
   position: relative;
 }
-.footer .xz {
+.s_footer .xz {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.footer .fd {
+.s_footer .fd {
   padding-top: 20px;
   border-top: 1px dashed gray;
 }
-.footer .fd .fot {
+.s_footer .fd .fot {
   position: absolute;
   width: 70%;
   font-size: 15px;
 }
-.footer .fd button {
+.s_footer .fd button {
   background-color: #f26522;
   height: 40px;
   width: 30%;
