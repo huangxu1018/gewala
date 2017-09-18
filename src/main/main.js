@@ -8,5 +8,5 @@
 
 var homeApp = angular.module("homePage", ["ngRoute"]);
 homeApp.controller("homeCtrol", function ($scope) {
-    $scope.shouye = "你好";
+    $scope.shouye = " ";
 });

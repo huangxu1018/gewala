@@ -1,0 +1,224 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: 楷体;
+}
+#header {
+  width: 100%;
+  height: 46px;
+  background-color: #f26522;
+  line-height: 46px ;
+  padding-left: 5%;
+}
+#header a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+#header .dropdown {
+  float: right;
+  padding-right: 5%;
+}
+#header .dropdown .dropdown-menu {
+  background-color: #f2620f;
+  height: 85px;
+  border: #f2620f;
+  margin: 0px;
+  border-radius: 0px;
+  min-width: 10%;
+}
+#header .dropdown .dropdown-menu a:hover {
+  background-color: #f26522 ;
+}
+.menu ul li {
+  width: 50%;
+  text-align: center;
+}
+.nav-tabs {
+  border-bottom: 2px solid #d3d7cc;
+}
+.nav-tabs li a {
+  color: black;
+}
+.nav-tabs > li.active > #movie_active,
+.nav-tabs > li.active > #movie_home,
+.nav-tabs > li.active > #movie_active:focus,
+.nav-tabs > li.active > #movie_home:focus,
+.nav-tabs > li.active > #movie_active:hover,
+.nav-tabs > li.active > #movie_home:hover {
+  background-color: #fff;
+  border: 0px;
+  color: #f2620f ;
+  border-bottom: 2px solid #f2620f;
+}
+.nav-tabs > li > a {
+  margin-right: 0px;
+  border-radius: 0px;
+  border: 0px;
+  padding: 9px 15px;
+}
+.nav-tabs > li > a:hover {
+  background-color: white;
+  border: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  border: 0px;
+}
+#movie {
+  padding-top: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#movie .sp {
+  color: #9d9fa0;
+  font-size: 16px;
+}
+#movie .list-group-item {
+  border: 0px;
+  border-bottom: 1px solid #beb7b6;
+  padding: 0px;
+  padding-bottom: 15px;
+}
+#movie .list-group-item .badge {
+  background-color: #F36523 ;
+}
+#movie .list-group-item .media {
+  position: relative;
+}
+#movie .list-group-item .media .meida-left {
+  float: left;
+  padding-right: 5%;
+}
+#movie .list-group-item .media .media-heading {
+  font-size: 19px;
+}
+#movie .btn1 {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+}
+#movie .btn1 button {
+  border: 1px solid #9b9f98;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+.screening {
+  width: 100%;
+  text-align: center;
+}
+.screening li {
+  width: 33%;
+}
+.screening li:nth-child(2) {
+  border-left: 1px solid #d3d7cc;
+  border-right: 1px solid #d3d7cc;
+}
+.screening li a {
+  color: black;
+}
+.screening .nav li a:hover {
+  color: #F36523;
+  background-color: white;
+}
+#mycontent {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+#mycontent .tx {
+  width: 40%;
+  position: absolute;
+  background-color: #e9ecee;
+}
+#mycontent .tx .nav-stacked {
+  height: 200px;
+}
+#mycontent .tx .active {
+  background-color: white;
+  border-left: 3px solid #f26522;
+}
+.tab-content ul li {
+  list-style-type: none;
+  border-bottom: 1px solid #EEEEEE;
+  height: 40px;
+  line-height: 40px;
+}
+.tab-content ul li a {
+  text-decoration: none;
+  color: black;
+}
+#mycontent1,
+#mycontent2 {
+  width: 60%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  height: 200px;
+  overflow: auto;
+}
+#mycontent1 ul,
+#mycontent2 ul {
+  padding-left: 0px;
+}
+#mycontent1 ul li,
+#mycontent2 ul li {
+  padding-left: 20px;
+}
+#box {
+  width: 100%;
+  z-index: 7;
+}
+#box .cinema {
+  border-bottom: 1px solid #beb7b6;
+  height: 120px;
+}
+#box .cinema .mycinema {
+  padding-top: 18px;
+}
+#box .cinema .mycinema a {
+  text-decoration: none;
+  color: black;
+}
+#box .cinema .mycinema a .theater {
+  font-size: 17px;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 4px;
+}
+#box .cinema .mycinema a span {
+  float: right;
+  color: #f26522;
+}
+#box .cinema .mycinema a p {
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 15px ;
+}
+#box .cinema .mycinema a p .km {
+  color: #9b9f98;
+  font-size: 13px;
+}
+#box .cinema .mycinema a .myp {
+  color: #9b9f98;
+  font-size: 13px;
+  margin-top: 15px;
+}
+#mybtn {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10px;
+}
+#mybtn button {
+  border: 1px solid #9b9f98;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}

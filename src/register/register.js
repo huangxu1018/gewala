@@ -1,9 +1,14 @@
 /**
  * Created by lenovo on 2017/9/14.
  */
-var app=angular.module("myApp04",[]);
-app.controller("myCtrl",function ($scope) {
+// var app=angular.module("myApp04",[]);
+// app.controller("myCtrl",function ($scope) {
+//
+// });
 
+var registerApp = angular.module("registerPage", ["ngRoute"]);
+registerApp.controller("registerCtrol", function ($scope) {
+    $scope.shouye = " ";
 });
 
 //验证码
@@ -44,8 +49,8 @@ window.onload = function (){
 //                  'J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
 //
 //     for (var i=0; i< codeLength; i++){
-//         var index = Math.floor(Math.random()*36);
-//         code += random[index];
+//         var movie = Math.floor(Math.random()*36);
+//         code += random[movie];
 //     }
 //     codeV.value = code;
 // }

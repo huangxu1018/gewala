@@ -1,119 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>广州电影票网上购买预订_广州电影院排片购票_最新上映电影票价_格瓦拉生活网</title>
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../bower_components/angular/angular.js"></script>
-    <script src="../../bower_components/angular-route/angular-route.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="../../dist/css/index.css" type="text/css">
-</head>
-<body ng-app="myapp">
 <div id="header">
-    <img src="../../img/LOGO.png" height="35px" width="90px"/>
-    <label><a href="../html/city.html">&nbsp;广州<img src="../../img/header02.png" height="22px" width="25px"/></a></label>
+    <img src="img/LOGO.png" height="35px" width="90px"/>
+    <label><a href="#/city">&nbsp;广州<img src="img/header02.png" height="22px" width="25px"/></a></label>
     <div class="dropdown">
-        <img src="../../img/header03.png" height="40px" width="55px" class="dropdown-toggle" id="drop"
-             data-toggle="dropdown"
+        <img src="img/header03.png" height="40px" width="55px" class="dropdown-toggle" id="drop" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="true">
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="drop">
-            <li><a href="../main/main.html"><img src="../../img/home.png" height="20px" width="20px"/>&nbsp;首页</a></li>
-            <li><a href="../html/login.html"><img src="../../img/people.png" height="20px" width="20px"/>&nbsp;个人中心</a></li>
+            <li><a href="#/"><img src="img/home.png" height="20px" width="20px"/>&nbsp;首页</a></li>
+            <li><a href="#/login"><img src="img/people.png" height="20px" width="20px"/>&nbsp;个人中心</a></li>
         </ul>
     </div>
 </div>
 
 <nav class="menu">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#movie" data-toggle="tab" id="movie_active">电影</a></li>
-        <li><a href="#cinema" data-toggle="tab" id="movie_home">影院</a></li>
+    <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
+        <li ng-class="{active: vm.activeTab == 1}" ng-click="vm.activeTab = 1"><a data-toggle="tab">电影</a></li>
+        <li ng-class="{active: vm.activeTab == 2}" ng-click="vm.activeTab = 2"><a  data-toggle="tab" >影院</a></li>
     </ul>
 </nav>
 <div id="tab" class="tab-content">
-
- <!---电影--->
-  <div class="tab-pane fade in active" id="movie" ng-controller="HotController">
-      <p class="sp">正在售票</p>
-      <div class="list-group">
-          <a class="list-group-item" ng-repeat="item in movies.subjects">
-              <span class="badge">{{item.rating.average}}</span>
-              <div class="media">
-                  <div class="meida-left">
-                      <img ng-src="{{item.images.small}}" class="media-object">
-                  </div>
-                  <div class="media-body">
-                      <h3 class="media-heading">{{item.title}}</h3>
-                      <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
-                      <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
-                      <p>类型：<span>{{item.genres.join('、')}}</span></p>
-                  </div>
-              </div>
-          </a>
-      </div>
-      <div class="btn1">
-          <button type="button">更多热映影片</button>
-      </div>
-      <p class="sp">即将上映</p>
-      <div class="list-group">
-          <a class="list-group-item" ng-repeat="item in movies.subjects">
-              <span class="badge">{{item.rating.average}}</span>
-              <div class="media">
-                  <div class="meida-left">
-                      <img ng-src="{{item.images.small}}" class="media-object">
-                  </div>
-                  <div class="media-body">
-                      <h3 class="media-heading">{{item.title}}</h3>
-                      <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
-                      <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
-                  </div>
-              </div>
-          </a>
-      </div>
-      <div class="btn1">
-          <button type="button">更多即将上映影片</button>
-      </div>
-  </div>
-
-<!---影院--->
-  <div class="tab-pane fade" id="cinema">
-    <div class="screening">
-        <ul class="nav nav-tabs">
-            <li><a href="#district" data-toggle="tab" onclick="show()" id="district_active"><img src="../../img/address.png" height="20" width="20"/>&nbsp;区域</a></li>
-            <li><a href="#feature" data-toggle="tab" onclick="show1()" id="feature_active"><img src="../../img/loudou.png" height="20" width="20"/>&nbsp;特色</a></li>
-            <li><a href="#"><img src="../../img/search.png" height="20" width="20"/>&nbsp;搜索影院</a></li>
-        </ul>
-
+    <!---电影--->
+    <div ng-show="vm.activeTab == 1">
+        <p class="sp">正在售票</p>
+        <div class="list-group">
+            <a class="list-group-item" ng-repeat="item in movies.subjects" href="#/moviedetail/{{item.title}}">
+                <span class="badge">{{item.rating.average}}</span>
+                <div class="media">
+                    <div class="meida-left">
+                        <img ng-src="{{item.images.small}}" class="media-object">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{item.title}}</h3>
+                        <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
+                        <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
+                        <p>类型：<span>{{item.genres.join('、')}}</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="btn1">
+            <button type="button">更多热映影片</button>
+        </div>
+        <p class="sp">即将上映</p>
+        <div class="list-group">
+            <a class="list-group-item" ng-repeat="item in movies.subjects">
+                <span class="badge">{{item.rating.average}}</span>
+                <div class="media">
+                    <div class="meida-left">
+                        <img ng-src="{{item.images.small}}" class="media-object">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{item.title}}</h3>
+                        <div>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last?'':'、'}}</span></div>
+                        <div>主演：<span ng-repeat="cast in item.casts">{{cast.name}}{{$last?'':'、'}}</span></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="btn1">
+            <button type="button">更多即将上映影片</button>
+        </div>
     </div>
 
     <!---影院--->
-    <div class="tab-pane fade" id="cinema">
+    <div ng-show="vm.activeTab == 2">
         <div class="screening">
             <ul class="nav nav-tabs">
-                <li><a id="district_text" href="#district" data-toggle="tab" onclick="show()"><img src="../../img/address.png" height="20"
-                                                                                width="20"/>&nbsp;区域</a></li>
-                <li><a id="feature_text" href="#feature" data-toggle="tab" onclick="show1()"><img src="../../img/loudou.png" height="20"
-                                                                                width="20"/>&nbsp;特色</a></li>
-                <li><a href="#"><img src="../../img/search.png" height="20" width="20"/>&nbsp;搜索影院</a></li>
+                <li ng-class="{active: vm.activeTab02 == 1}" ng-click="vm.activeTab02 = 1"><a data-toggle="tab" onclick="show()" id="district_active"><img src="img/address.png" height="20" width="20"/>&nbsp;区域</a></li>
+                <li ng-class="{active: vm.activeTab02 == 2}" ng-click="vm.activeTab02 = 2"><a data-toggle="tab" onclick="show1()" id="feature_active"><img src="img/loudou.png" height="20" width="20"/>&nbsp;特色</a></li>
+                <li><a href="#"><img src="img/search.png" height="20" width="20"/>&nbsp;搜索影院</a></li>
             </ul>
         </div>
 
         <div id="mycontent" class="tab-content">
             <!----区域---->
-            <div class="tab-pane fade" id="district">
+            <div ng-show="vm.activeTab02 == 1">
                 <div class="tx">
-                    <ul class="nav nav-tabs nav-stacked">
-                        <li class="active"><a href="#quyu" data-toggle="tab">区域</a></li>
-                        <li><a href="#metro" data-toggle="tab">地铁</a></li>
-                        <li><a href="#trading" data-toggle="tab">商圈</a></li>
+                    <ul class="nav nav-tabs nav-stacked" ng-init="vm.activeTab_area=1">
+                        <li ng-class="{active: vm.activeTab_area == 1}" ng-click="vm.activeTab_area = 1"><a data-toggle="tab">区域</a></li>
+                        <li ng-class="{active: vm.activeTab_area == 2}" ng-click="vm.activeTab_area = 2"><a data-toggle="tab">地铁</a></li>
+                        <li ng-class="{active: vm.activeTab_area == 3}" ng-click="vm.activeTab_area = 3"><a data-toggle="tab">商圈</a></li>
                     </ul>
                 </div>
                 <div id="mycontent1" class="tab-content">
                     <!----区域---->
-                    <div class="tab-pane fade in active" id="quyu">
+                    <div ng-show="vm.activeTab_area == 1">
                         <ul>
                             <li><a href="#">全部</a></li>
                             <li><a href="#">荔湾区</a></li>
@@ -131,7 +102,7 @@
                         </ul>
                     </div>
                     <!----地铁---->
-                    <div class="tab-pane fade" id="metro">
+                    <div ng-show="vm.activeTab_area == 2">
                         <ul>
                             <li><a href="#">全部</a></li>
                             <li><a href="#">1号线</a></li>
@@ -146,7 +117,7 @@
                         </ul>
                     </div>
                     <!----商圈---->
-                    <div class="tab-pane fade" id="trading">
+                    <div ng-show="vm.activeTab_area == 3">
                         <ul>
                             <li><a href="#">全部</a></li>
                             <li><a href="#">西关</a></li>
@@ -164,16 +135,16 @@
             </div>
 
             <!----特色---->
-            <div class="tab-pane fade" id="feature">
+            <div ng-show="vm.activeTab02 == 2">
                 <div class="tx">
-                    <ul class="nav nav-tabs nav-stacked">
-                        <li class="active"><a href="#special" data-toggle="tab">特效厅</a></li>
-                        <li><a href="#service" data-toggle="tab">服务</a></li>
+                    <ul class="nav nav-tabs nav-stacked" ng-init="vm.activeTab_feature=1">
+                        <li ng-class="{active: vm.activeTab_feature == 1}" ng-click="vm.activeTab_feature = 1"><a data-toggle="tab">特效厅</a></li>
+                        <li ng-class="{active: vm.activeTab_feature == 2}" ng-click="vm.activeTab_feature = 2"><a data-toggle="tab">服务</a></li>
                     </ul>
                 </div>
                 <div id="mycontent2" class="tab-content">
                     <!----特效厅---->
-                    <div class="tab-pane fade in active" id="special">
+                    <div ng-show="vm.activeTab_feature == 1">
                         <ul>
                             <li><a href="#">全部</a></li>
                             <li><a href="#">4D厅</a></li>
@@ -189,7 +160,7 @@
                         </ul>
                     </div>
                     <!----服务---->
-                    <div class="tab-pane fade" id="service">
+                    <div ng-show="vm.activeTab_feature == 1">
                         <ul>
                             <li><a href="#">全部</a></li>
                             <li><a href="#">免费停车</a></li>
@@ -205,7 +176,7 @@
         <div id="box">
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">金逸影城-二沙岛电影会所<span>6<sup>.6</sup></span></div>
                         <p>二沙岛烟雨路28号（星海音乐厅旁）<span class="km">1.2km</span></p>
                         <p class="myp">放映4部余24场</p>
@@ -280,12 +251,4 @@
     </div>
 </div>
 
-</div>
-<<<<<<< HEAD:src/html/index.html
-
-<script src="../js/index.js"></script>
-=======
-<script src="index.js"></script>
->>>>>>> 989538f4677aceba629fb5879fef2edd7c3512c0:src/index/index.html
-</body>
-</html>
+<script src="../js/movie_show.js"></script>

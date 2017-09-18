@@ -2,6 +2,30 @@
  * Created by huangx des DATE 2017/9/6.TIME 17:09.
  */
 
+var movieApp = angular.module("moviePage",["ngRoute"]);
+movieApp.controller("movieCtrol",["$scope", "$http",
+    function ($scope, $http) {
+        var vm = $scope.vm = {};
+        window.doubanMovieCallback = function (data) {
+            if (data.msg) {
+                //返回错误信息
+                $scope.message = data.msg;
+            } else {
+                // console.log(data);
+                $scope.movies = data;
+                $scope.message = '';
+            }
+        };
+        //网络请求地址
+        //https://api.douban.com//v2/movie/search?q=
+        var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
+        $http.jsonp(url).error(function () {
+
+        });
+
+    }]);
+
+
 var district = document.getElementById('district');
 var feature = document.getElementById('feature');
 var timing = document.getElementById('timing');
@@ -47,26 +71,3 @@ function show2() {
         timing_active.style.color = "black";
     }
 }
-(function (angular) {
-    var hotModule = angular.module('myapp', ['ngRoute']);
-    hotModule
-        .controller('HotController', ["$scope", "$http",
-            function ($scope, $http) {
-                window.doubanMovieCallback = function (data) {
-                    if (data.msg) {
-                        //返回错误信息
-                        $scope.message = data.msg;
-                    } else {
-                        $scope.movies = data;
-                        $scope.message = '';
-                    }
-                };
-                //网络请求地址
-                var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
-                $http.jsonp(url).error(function () {
-
-                });
-
-            }]);
-
-})(angular);
