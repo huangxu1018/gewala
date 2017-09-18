@@ -5,13 +5,18 @@
   border: none;
   background-color: #f3f3f3;
 }
-/*顶部栏*/
-#header {
+#SelectM {
+  /*顶部栏*/
+  /*影院信息*/
+  /*电影信息*/
+  /*时间场次*/
+}
+#SelectM #header {
   height: 46px;
   width: 100%;
   background-color: #f26422;
 }
-#header a {
+#SelectM #header a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
@@ -19,10 +24,10 @@
   text-align: center;
   font-size: 16px;
 }
-.dropdown {
+#SelectM .dropdown {
   float: right;
 }
-.dropdown-menu {
+#SelectM .dropdown-menu {
   background-color: #f2620f;
   height: 85px;
   border: #f2620f;
@@ -30,61 +35,58 @@
   border-radius: 0;
   min-width: 10%;
 }
-.dropdown-menu li,
-.dropdown-menu img {
+#SelectM .dropdown-menu li,
+#SelectM .dropdown-menu img {
   background-color: #f2620f;
 }
-.dropdown-menu a:hover {
+#SelectM .dropdown-menu a:hover {
   background-color: #f26522 ;
 }
-/*影院信息*/
-#detial {
+#SelectM #detial {
   height: 69px;
   width: 100%;
   border-bottom: dashed 1px #cccccc;
 }
-#detial a {
+#SelectM #detial a {
   display: inline-block;
   color: #000000;
   margin: 12px 21px 0;
 }
-#detial div {
+#SelectM #detial div {
   float: left;
   height: 66px;
 }
-#link_detial img {
+#SelectM #link_detial img {
   margin-bottom: 23px;
 }
-/*电影信息*/
-.nav-tabs {
+#SelectM .nav-tabs {
   width: 100%;
   height: 51px;
 }
-.nav-tabs li,
-.nav-tabs li a {
+#SelectM .nav-tabs li,
+#SelectM .nav-tabs li a {
   width: 121px;
   height: 36px;
   margin-top: 3px;
   color: #000000;
 }
-#movieContent .title span {
+#SelectM #movieContent .title span {
   color: #f26422;
   font-weight: bold;
   margin-left: 15px;
 }
-/*时间场次*/
-table {
+#SelectM table {
   width: 100%;
 }
-td {
+#SelectM td {
   padding-left: 5%;
   padding-right: 5%;
 }
-.jq {
+#SelectM .jq {
   color: #f26422;
   font-weight: bold;
 }
-.sc {
+#SelectM .sc {
   border-radius: 15px;
   background-color: #d8d8d8;
   width: 70px;
@@ -92,9 +94,9 @@ td {
   font-size: 11px;
   margin-left: -5px;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+#SelectM .nav-tabs > li.active > a,
+#SelectM .nav-tabs > li.active > a:hover,
+#SelectM .nav-tabs > li.active > a:focus {
   color: #FFFFFF;
   cursor: default;
   border: 1px solid #ddd;

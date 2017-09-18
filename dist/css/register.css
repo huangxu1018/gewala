@@ -3,13 +3,16 @@
   padding: 0;
   background-color: #f3f3f3;
 }
-/*顶部栏*/
-#header {
+#zcpage {
+  /*顶部栏*/
+  /*注册输入框*/
+}
+#zcpage #header {
   height: 46px;
   width: 100%;
   background-color: #f26422;
 }
-#header a {
+#zcpage #header a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
@@ -17,8 +20,7 @@
   text-align: center;
   font-size: 16px;
 }
-/*注册输入框*/
-.form-group {
+#zcpage .form-group {
   position: relative;
   height: 46px;
   border: solid 1px #dbdbdb;
@@ -27,12 +29,12 @@
   width: 95%;
   margin-left: 2.5%;
 }
-.form-group img {
+#zcpage .form-group img {
   float: left;
   display: inline;
   margin-top: 12px;
 }
-.form-group input {
+#zcpage .form-group input {
   float: left;
   height: 44px;
   border: none;
@@ -40,10 +42,10 @@
   margin-left: 10px;
   display: inline;
 }
-#cod {
+#zcpage #cod {
   width: 80%;
 }
-#code {
+#zcpage #code {
   font-style: italic;
   font-weight: bold;
   border: 2px solid #c7c5c5;
@@ -55,10 +57,10 @@
   right: 15px;
   top: 6px;
 }
-.hint {
+#zcpage .hint {
   margin-left: 20px;
 }
-.sigin_btn {
+#zcpage .sigin_btn {
   background-color: #f26422;
   color: #FFFFFF;
   width: 100%;
@@ -66,11 +68,11 @@
   border-radius: 4px;
   border: 3px solid #FFFFFF;
 }
-.tar {
+#zcpage .tar {
   text-align: right;
   margin: 7px 10px 10px;
 }
-.gwl_protocol,
-.login {
+#zcpage .gwl_protocol,
+#zcpage .login {
   color: #f26422;
 }
