@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width,
-                                   initial-scalc=1.0，
-                                   maximum-scale=1.0，
-                                   user-scalable=no">
 
+<<<<<<< HEAD:src/html/selectmovie.html
     <script src="../../bower_components/jquery/dist/jquery.js"></script>
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
@@ -17,16 +9,18 @@
 </head>
 <body>
 <div id="SelectM">
+=======
+>>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/selectmovie/selectmovie.html
 <!--顶部栏-->
 <div id="header">
-    <a style="width:10%" href="main.html" class="back"><</a>
+    <a style="width:10%" href="#/cinema" class="back"><</a>
     <a style="width:75%;font-weight: bold">蜘蛛侠：英雄归来</a>
     <div class="dropdown">
-        <img src="../../img/header03.png" height="40" width="55" class="dropdown-toggle" id="drop" data-toggle="dropdown"
+        <img src="img/header03.png" height="40" width="55" class="dropdown-toggle" id="drop" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="true">
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="drop">
-            <li><a href="#"><img src="../../img/home.png" height="20" width="20"/>&nbsp;首页</a></li>
-            <li><a href="#"><img src="../../img/people.png" height="20" width="20"/>&nbsp;个人中心</a></li>
+            <li><a href="#/"><img src="img/home.png" height="20" width="20"/>&nbsp;首页</a></li>
+            <li><a href="#/login"><img src="img/people.png" height="20" width="20"/>&nbsp;个人中心</a></li>
         </ul>
     </div>
 </div>
@@ -39,20 +33,20 @@
         <p style="font-size: 14px;margin: 3px 21px 10px;">天河棠下天盈建博汇建材市场1楼</p>
     </div>
     <div style="width:10%;line-height:66px">
-        <a id="link_detial" href="cinema_detail.html"><img src="../../img/more.png" height="20" width="20"/></a>
+        <a id="link_detial" href="#/cinemadetail"><img src="img/more.png" height="20" width="20"/></a>
     </div>
 </div>
 
 <!--日期-->
-<ul class="nav nav-tabs">
-    <li class="active"><a href="#a1" data-toggle="tab">今天09月13日</a></li>
-    <li><a href="#a2" data-toggle="tab">明天09月14日</a></li>
+<ul class="nav nav-tabs" ng-init="vs.activeTab=1">
+    <li ng-class="{active: vs.activeTab == 1}" ng-click="vs.activeTab = 1"><a data-toggle="tab">今天09月13日</a></li>
+    <li ng-class="{active: vs.activeTab == 2}" ng-click="vs.activeTab = 2"><a data-toggle="tab">明天09月14日</a></li>
 </ul>
 
 <!--场次-->
 <div id="schedule01" class="tab-content">
 
-    <div class="tab-pane fade in active" id="a1">
+    <div ng-show="vs.activeTab == 1">
         <table>
             <tr>
                 <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
@@ -91,7 +85,7 @@
             </tr>
         </table>
     </div>
-    <div class="tab-pane fade" id="a2">
+    <div ng-show="vs.activeTab == 2">
         <table>
             <tr>
                 <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
@@ -130,8 +124,10 @@
             </tr>
         </table>
     </div>
-
 </div>
+<<<<<<< HEAD:src/html/selectmovie.html
 </div>
 </body>
 </html>
+=======
+>>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/selectmovie/selectmovie.html

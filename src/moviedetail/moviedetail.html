@@ -1,0 +1,127 @@
+
+<div style="height: 2700px;">
+<header class="navbar navbar-default" id="nav">
+    <div class="container">
+        <img src="img/logo_new.png" id="logo_new">
+        <img src="img/logo2.png" id="logo2">
+        <a id="downloadApp" href="#" class="">打开APP</a>
+    </div>
+</header>
+<div id="top_video" class="container">
+
+    <div class="row" id="back_btn">
+        <div id="back" class="col-xs-1">
+            <a  class="back" href="#/movie"><img class="back_img" src="img/headerback_3.png" style="width: 15px;height: 15px;"></a>
+        </div>
+        <div id="btn" class="col-xs-offset-9 col-xs-1">
+            <div class="dropdown" id="dropdown">
+                <img src="img/cd.png" height="15px" width="15px" class="dropdown-toggle" id="drop" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="drop" id="dropdown_menu">
+                    <li style="margin-top: -5px;"><a href="#/"><img src="img/home.png" height="15px" width="13px"/>&nbsp;首页</a></li>
+                    <li><a href="#/login"><img src="img/people.png" height="15px" width="13px"/>&nbsp;个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img class="img_large" ng-src="{{movie.images.large}}">
+</div>
+<div id="movie_detail">
+    <div class="media">
+        <a class="pull-left">
+            <img class="media-object" ng-src="{{movie.images.small}}" style="width: 100px;height: 150px;">
+        </a>
+        <div class="media-body">
+            <span><img src="img/userStar.png" style="width: 74px; height: 12px;">&nbsp;&nbsp;<span style="color: #DC3C0A">{{movie.rating.average}}</span></span>
+            <h4 class="media-heading" id="media-heading">{{movie.title}}</h4>
+            <p id="dun_english"><b>Dunkirk</b></p>
+            <div class="detail">
+                <p>导演：<span ng-repeat="director in movie.directors">{{director.name}}{{$last?'':'、'}}</span></span></p>
+                <p>主演：<span ng-repeat="cast in movie.casts">{{cast.name}}{{$last?'':'、'}}</span></p>
+                <p>类型：{{movie.genres.join('、')}}</p>
+                <p>地区：法国,英国,美国</p>
+                <p>片长：</p>
+                <p>语言：英语/法语/德语</p>
+                <p>首映：2017-09-01</p>
+            </div>
+            <button id="genre" type="button">{{movie.genres.join('、')}}</button>
+        </div>
+        <a class="pull-right" id="more" href="#"><img src="img/more.png"></a>
+    </div>
+    <div id="abstract">
+        1940年5月25日至6月4日之间，在德国机械化部队的快速攻势下崩溃的英法联
+        军，在位于法国北部、靠近比利时边境的港口小城敦刻尔克，依靠英国海军和
+        民众自发组织的“无敌舰队”，进行了史上最大规模的军事疏散行动，成功挽
+        救了超过33万8000名来自英国、法国、比利时军人的生命。
+
+    </div>
+    <input id="spread" type="button" value="展开" onclick="show()">
+    <hr>
+    <div id="stills">
+        <p style="color: #999999">剧照</p>
+        <div class="owl-carousel owl-theme">
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still01.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still02.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still03.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still04.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still05.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still06.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still07.jpg" alt=""/></div>
+            <div class="item" ><img src="owlCarousel/IMG/gewala_still08.jpg" alt=""/></div>
+        </div>
+        <p class="stills_img">共63张剧照</p>
+    </div>
+    <hr>
+    <div id="comment">
+        <p  style="color: #999999">哇啦</p>
+        <ul id="comment_lists">
+            <li ng-repeat="x in lists">
+                <div class="media">
+                    <a class="pull-left">
+                        <img id="head_img" src="{{x.head_img}}">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading"><b>{{x.username}}</b></h5>
+                        <p id="date">{{x.date}}</p>
+                    </div>
+                    <p>{{x.comment}}</p>
+                    <span><img src="{{x.star_img}}" style="width: 74px; height: 12px;">&nbsp;&nbsp;<em id="star_num">{{x.star_num}}<sup>{{x.decimal}}</sup></em></span>
+                    <span id="other_reply">
+                        <img src="{{x.reply}}"><em>{{x.reply_num}}</em>
+                        <img id="comlike" src="{{x.comlike}}"><em>{{x.comlike_num}}</em>
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <input id="load_more" type="button" value="加载中...">
+    </div>
+</div>
+<div class="footer_nav">
+    <a class="like" href="#">
+        <img class="like_pic" src="img/like.png" style="width: 23px;height: 23px;">
+        <span class="like_num">41K</span>
+    </a>
+    <a class="write" href="#">
+        <img class="write_pic" src="img/write.png" style="width: 23px;height: 23px;">
+        <span class="write_num">写哇啦</span>
+    </a>
+    <a id="sel_seat" href="#/cinema">选座购票</a>
+</div>
+
+</div>
+<script>
+    $('.owl-carousel').owlCarousel({
+        items: 3 ,
+        loop: true,
+        margin: 1,
+        merge: true,
+        responsive: {
+            678: {
+                mergeFit: true
+            },
+            1000: {
+                mergeFit: false
+            }
+        }
+    });
+</script>

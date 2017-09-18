@@ -5,23 +5,23 @@
 body {
   font-family: 楷体;
 }
-#header {
+#ma_header {
   width: 100%;
   height: 46px;
   background-color: #f26522;
   line-height: 46px ;
   padding-left: 4%;
 }
-#header a {
+#ma_header a {
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
-#header .dropdown {
+#ma_header .dropdown {
   float: right;
   padding-right: 2%;
 }
-#header .dropdown .dropdown-menu {
+#ma_header .dropdown .dropdown-menu {
   background-color: #f2620f;
   height: 85px;
   border: #f2620f;
@@ -29,19 +29,19 @@ body {
   border-radius: 0px;
   min-width: 10%;
 }
-#header .dropdown .dropdown-menu a:hover {
+#ma_header .dropdown .dropdown-menu a:hover {
   background-color: #f26522 ;
 }
-.container {
+#ma_main .container {
   padding-top: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.container a {
+#ma_main .container a {
   text-decoration: none;
   color: white;
 }
-.container a .jumbotron {
+#ma_main .container a .jumbotron {
   background-color: #f26622;
   width: 100%;
   height: 100px;
@@ -50,17 +50,17 @@ body {
   padding-top: 10px;
   line-height: 80px;
 }
-.container a .jumbotron .dy {
+#ma_main .container a .jumbotron .dy {
   font-size: 40px;
 }
-.container a .jumbotron .tit {
+#ma_main .container a .jumbotron .tit {
   font-size: 15px;
   float: right;
 }
-.container a .jumbotron .tit strong {
+#ma_main .container a .jumbotron .tit strong {
   font-size: 20px;
 }
-.container #act {
+#ma_main .container #act {
   background-color: #fd1361;
   padding-top: 10px;
 }

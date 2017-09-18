@@ -3,37 +3,36 @@
   padding: 0px;
 }
 body {
-  background-color: #EEEEEE;
   font-family: 楷体;
 }
-h2 {
+.ci_city h2 {
   font-size: 17px;
   padding-left: 5%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-table {
+.ci_city table {
   width: 100%;
 }
-table td {
+.ci_city table td {
   border: 1px solid #beb7b6;
   background-color: white;
   width: 25%;
   height: 40px;
   text-align: center;
 }
-table td a {
+.ci_city table td a {
   font-size: 14px;
   text-decoration: none;
   color: black;
 }
-.zm tr td {
+.ci_city .zm tr td {
   width: 16%;
 }
-#footer {
+#ci_footer {
   padding-top: 50px;
   text-align: center;
 }
-#footer p {
+#ci_footer p {
   padding-top: 10px;
 }

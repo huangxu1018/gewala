@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/html/movieschedule.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,17 +28,19 @@
 </head>
 <body>
 <div id="MShedule">
+=======
+>>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/movieschedule/movieschedule.html
 
 <!--顶部栏-->
 <div id="header">
-    <a style="width:10%" href="main.html" class="back"><</a>
+    <a style="width:10%" href="#/movie" class="back"><</a>
     <a style="width:75%;font-weight: bold">哈艺时尚影城-天河科韵店</a>
     <div class="dropdown">
-        <img src="../../img/header03.png" height="40" width="55" class="dropdown-toggle" id="drop" data-toggle="dropdown"
+        <img src="img/header03.png" height="40" width="55" class="dropdown-toggle" id="drop" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="true">
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="drop">
-            <li><a href="main.html"><img src="../../img/home.png" height="20" width="20"/>&nbsp;首页</a></li>
-            <li><a href="login.html"><img src="../../img/people.png" height="20" width="20"/>&nbsp;个人中心</a></li>
+            <li><a href="#/"><img src="img/home.png" height="20" width="20"/>&nbsp;首页</a></li>
+            <li><a href="#/login"><img src="img/people.png" height="20" width="20"/>&nbsp;个人中心</a></li>
         </ul>
     </div>
 </div>
@@ -50,7 +53,7 @@
            <p style="font-size: 14px;margin: 3px 21px 10px;">天河棠下天盈建博汇建材市场1楼</p>
        </div>
        <div style="width:10%;line-height:66px">
-           <a id="link_detial" href="cinema_detail.html"><img src="../../img/more.png" height="20" width="20"/></a>
+           <a id="link_detial" href="#/cinemadetail"><img src="img/more.png" height="20" width="20"/></a>
        </div>
 </div>
 
@@ -61,42 +64,42 @@
        <div id="myTab" class="owl-carousel owl-theme tabs">
            <div  class="item">
                <a href="#spiderman" data-toggle="tab" id="spiderman_active" onclick="show01()">
-                  <img src="../../img/Y-spiderman.jpg" height="112" width="72"/>
+                  <img src="img/Y-spiderman.jpg" height="112" width="72"/>
                </a>
            </div>
 
            <div  class="item">
                <a href="#Gintama" data-toggle="tab"  id="Gintama_active" onclick="show02()">
-                   <img src="../../img/Y-Gintama.jpg" height="112" width="72"/>
+                   <img src="img/Y-Gintama.jpg" height="112" width="72"/>
                </a>
            </div>
 
            <div  class="item">
                <a href="#Dunkirk" data-toggle="tab" id="Dunkirk_active" onclick="show03()">
-                   <img src="../../img/Y-Dunkirk.jpg" height="112" width="72"/>
+                   <img src="img/Y-Dunkirk.jpg" height="112" width="72"/>
                </a>
            </div>
 
            <div  class="item">
                <a href="#WarOfThePlanet" data-toggle="tab" id="WarOfThePlanet_active" onclick="show04()">
-                   <img src="../../img/Y-WarOfThePlanet.jpg" height="112" width="72"/>
+                   <img src="img/Y-WarOfThePlanet.jpg" height="112" width="72"/>
                </a>
            </div>
 
            <div  class="item">
                <a href="#Valerian" data-toggle="tab" id="Valerian_active" onclick="show05()">
-                   <img src="../../img/Y-Valerian.jpg" height="112" width="72"/>
+                   <img src="img/Y-Valerian.jpg" height="112" width="72"/>
                </a>
            </div>
 
            <div  class="item">
                <a href="#Paradox" data-toggle="tab" id="Paradox_active" onclick="show06()">
-                   <img src="../../img/Y-Paradox.jpg" height="112" width="72"/>
+                   <img src="img/Y-Paradox.jpg" height="112" width="72"/>
                </a>
            </div>
            <div  class="item">
                <a href="#WolfWarriors2" data-toggle="tab" id="WolfWarriors2_active" onclick="show07()">
-                   <img src="../../img/Y-WolfWarriors2.jpg" height="112" width="72"/>
+                   <img src="img/Y-WolfWarriors2.jpg" height="112" width="72"/>
                </a>
            </div>
        </div>
@@ -109,16 +112,16 @@
                 <p class="type">动作,幻,冒险,科幻</p>
 
                 <!--日期-->
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#a1" data-toggle="tab">今天09月13日</a></li>
-                    <li><a href="#a2" data-toggle="tab">明天09月14日</a></li>
+                <ul class="nav nav-tabs"  ng-init="vd.activeTab=1">
+                    <li ng-class="{active: vd.activeTab == 1}" ng-click="vd.activeTab = 1"><a data-toggle="tab">今天09月13日</a></li>
+                    <li ng-class="{active: vd.activeTab == 2}" ng-click="vd.activeTab = 2"><a data-toggle="tab">明天09月14日</a></li>
                 </ul>
 
                 <!--场次-->
                 <div id="schedule01" class="tab-content">
 
-                    <div class="tab-pane fade in active" id="a1">
-                        <a href="seat.html" style="color: #000;text-decoration: none;">
+                    <div ng-show="vd.activeTab == 1">
+                        <a href="../seat/seat.html" style="color: #000;text-decoration: none;">
                         <table>
                             <tr>
                                 <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
@@ -158,8 +161,8 @@
                         </table>
                         </a>
                     </div>
-                    <div class="tab-pane fade" id="a2">
-                        <a href="seat.html" style="color: #000;text-decoration: none;">
+                    <div ng-show="vd.activeTab == 2">
+                        <a href="#/seat" style="color: #000;text-decoration: none;">
                         <table>
                             <tr>
                                 <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
@@ -219,7 +222,7 @@
                 <div id="schedule02" class="tab-content">
 
                     <div class="tab-pane fade in active" id="a3">
-                        <a href="seat.html" style="color: #000;text-decoration: none;">
+                        <a href="../seat/seat.html" style="color: #000;text-decoration: none;">
                         <table>
                             <tr>
                                 <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
@@ -779,7 +782,10 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD:src/html/movieschedule.html
 </div>
 <script src="../js/movieschedule.js"></script>
 </body>
 </html>
+=======
+>>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/movieschedule/movieschedule.html

@@ -18,10 +18,10 @@ gulp.task("minify-css",function () {
         .pipe(cleanCSS())
         .pipe(gulp.dest("./dist/css"))
 });
-gulp.task("minify-html",function () {
-    gulp.src("src/html/*.html")
+gulp.task("minify-selectmovie",function () {
+    gulp.src("src/selectmovie/*.html")
         .pipe(htmlmini())
-        .pipe(gulp.dest("./dist/html"))
+        .pipe(gulp.dest("./dist/selectmovie"))
 });
 gulp.task("myless",function () {
     gulp.src("src/less/*.less")
@@ -34,5 +34,5 @@ gulp.task("serve",["myless"],function () {
         server:"./"
     });
     gulp.watch("src/less/*.less",["myless"]);
-    gulp.watch("*.html").on("change",reload);
+    gulp.watch("/src/**/*.html").on("change",reload);
 });

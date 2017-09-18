@@ -1,6 +1,11 @@
 /**
  * Created by lenovo on 2017/9/12.
  */
+var moviescheduleApp = angular.module("movieschedulePage", ["ngRoute"]);
+moviescheduleApp.controller("moviescheduleCtrol", function ($scope) {
+    var vd = $scope.vd = {};
+});
+
 //图片展示
 $('.owl-carousel').owlCarousel({
     items: 5 ,
