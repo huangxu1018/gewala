@@ -1,27 +1,20 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
-body {
-  font-family: 楷体;
-}
-#mo_header {
+.mo #header {
   width: 100%;
   height: 46px;
   background-color: #f26522;
   line-height: 46px ;
   padding-left: 5%;
 }
-#mo_header a {
+.mo #header a {
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
-#mo_header .dropdown {
+.mo #header .dropdown {
   float: right;
   padding-right: 5%;
 }
-#mo_header .dropdown .dropdown-menu {
+.mo #header .dropdown .dropdown-menu {
   background-color: #f2620f;
   height: 85px;
   border: #f2620f;
@@ -29,132 +22,132 @@ body {
   border-radius: 0px;
   min-width: 10%;
 }
-#mo_header .dropdown .dropdown-menu a:hover {
+.mo #header .dropdown .dropdown-menu a:hover {
   background-color: #f26522 ;
 }
-.mo_menu ul li {
+.mo .menu ul li {
   width: 50%;
   text-align: center;
 }
-.nav-tabs {
+.mo .nav-tabs {
   border-bottom: 2px solid #d3d7cc;
 }
-.nav-tabs li a {
+.mo .nav-tabs li a {
   color: black;
 }
-.nav-tabs > li.active > #movie_active,
-.nav-tabs > li.active > #movie_home,
-.nav-tabs > li.active > #movie_active:focus,
-.nav-tabs > li.active > #movie_home:focus,
-.nav-tabs > li.active > #movie_active:hover,
-.nav-tabs > li.active > #movie_home:hover {
+.mo .nav-tabs > li.active > #movie_active,
+.mo .nav-tabs > li.active > #movie_home,
+.mo .nav-tabs > li.active > #movie_active:focus,
+.mo .nav-tabs > li.active > #movie_home:focus,
+.mo .nav-tabs > li.active > #movie_active:hover,
+.mo .nav-tabs > li.active > #movie_home:hover {
   background-color: #fff;
   border: 0px;
   color: #f2620f ;
   border-bottom: 2px solid #f2620f;
 }
-.nav-tabs > li > a {
+.mo .nav-tabs > li > a {
   margin-right: 0px;
   border-radius: 0px;
   border: 0px;
   padding: 9px 15px;
 }
-.nav-tabs > li > a:hover {
+.mo .nav-tabs > li > a:hover {
   background-color: white;
   border: none;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover {
+.mo .nav-tabs > li.active > a,
+.mo .nav-tabs > li.active > a:focus,
+.mo .nav-tabs > li.active > a:hover {
   border: 0px;
 }
-#mo_tab #movie {
+.mo #movie {
   padding-top: 15px;
   padding-left: 5%;
   padding-right: 5%;
 }
-#mo_tab #movie .sp {
+.mo #movie .sp {
   color: #9d9fa0;
   font-size: 16px;
 }
-#mo_tab #movie .list-group-item {
+.mo #movie .list-group-item {
   border: 0px;
   border-bottom: 1px solid #beb7b6;
   padding: 0px;
   padding-bottom: 15px;
 }
-#mo_tab #movie .list-group-item .badge {
+.mo #movie .list-group-item .badge {
   background-color: #F36523 ;
 }
-#mo_tab #movie .list-group-item .media {
+.mo #movie .list-group-item .media {
   position: relative;
 }
-#mo_tab #movie .list-group-item .media .meida-left {
+.mo #movie .list-group-item .media .meida-left {
   float: left;
   padding-right: 5%;
 }
-#mo_tab #movie .list-group-item .media .media-heading {
+.mo #movie .list-group-item .media .media-heading {
   font-size: 19px;
 }
-#mo_tab #movie .btn1 {
+.mo #movie .btn1 {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 20px;
 }
-#mo_tab #movie .btn1 button {
+.mo #movie .btn1 button {
   border: 1px solid #9b9f98;
   background-color: white;
   width: 100%;
   height: 40px;
   border-radius: 5px;
 }
-#mo_tab .screening {
+.mo .screening {
   width: 100%;
   text-align: center;
 }
-#mo_tab .screening li {
+.mo .screening li {
   width: 33%;
 }
-#mo_tab .screening li:nth-child(2) {
+.mo .screening li:nth-child(2) {
   border-left: 1px solid #d3d7cc;
   border-right: 1px solid #d3d7cc;
 }
-#mo_tab .screening li a {
+.mo .screening li a {
   color: black;
 }
-#mo_tab .screening .nav li a:hover {
+.mo .screening .nav li a:hover {
   color: #F36523;
   background-color: white;
 }
-#mo_tab #mycontent {
+.mo #mycontent {
   width: 100%;
   position: relative;
   z-index: 10;
 }
-#mo_tab #mycontent .tx {
+.mo #mycontent .tx {
   width: 40%;
   position: absolute;
   background-color: #e9ecee;
 }
-#mo_tab #mycontent .tx .nav-stacked {
+.mo #mycontent .tx .nav-stacked {
   height: 200px;
 }
-#mo_tab #mycontent .tx .active {
+.mo #mycontent .tx .active {
   background-color: white;
   border-left: 3px solid #f26522;
 }
-#mo_tab .tab-content ul li {
+.mo .tab-content ul li {
   list-style-type: none;
   border-bottom: 1px solid #EEEEEE;
   height: 40px;
   line-height: 40px;
 }
-#mo_tab .tab-content ul li a {
+.mo .tab-content ul li a {
   text-decoration: none;
   color: black;
 }
-#mo_tab #mycontent1,
-#mo_tab #mycontent2 {
+.mo #mycontent1,
+.mo #mycontent2 {
   width: 60%;
   position: absolute;
   top: 0px;
@@ -163,59 +156,59 @@ body {
   height: 200px;
   overflow: auto;
 }
-#mo_tab #mycontent1 ul,
-#mo_tab #mycontent2 ul {
+.mo #mycontent1 ul,
+.mo #mycontent2 ul {
   padding-left: 0px;
 }
-#mo_tab #mycontent1 ul li,
-#mo_tab #mycontent2 ul li {
+.mo #mycontent1 ul li,
+.mo #mycontent2 ul li {
   padding-left: 20px;
 }
-#mo_tab #box {
+.mo #box {
   width: 100%;
   z-index: 7;
 }
-#mo_tab #box .cinema {
+.mo #box .cinema {
   border-bottom: 1px solid #beb7b6;
   height: 120px;
 }
-#mo_tab #box .cinema .mycinema {
+.mo #box .cinema .mycinema {
   padding-top: 18px;
 }
-#mo_tab #box .cinema .mycinema a {
+.mo #box .cinema .mycinema a {
   text-decoration: none;
   color: black;
 }
-#mo_tab #box .cinema .mycinema a .theater {
+.mo #box .cinema .mycinema a .theater {
   font-size: 17px;
   padding-right: 5%;
   padding-left: 5%;
   padding-bottom: 4px;
 }
-#mo_tab #box .cinema .mycinema a span {
+.mo #box .cinema .mycinema a span {
   float: right;
   color: #f26522;
 }
-#mo_tab #box .cinema .mycinema a p {
+.mo #box .cinema .mycinema a p {
   padding-right: 5%;
   padding-left: 5%;
   font-size: 15px ;
 }
-#mo_tab #box .cinema .mycinema a p .km {
+.mo #box .cinema .mycinema a p .km {
   color: #9b9f98;
   font-size: 13px;
 }
-#mo_tab #box .cinema .mycinema a .myp {
+.mo #box .cinema .mycinema a .myp {
   color: #9b9f98;
   font-size: 13px;
   margin-top: 15px;
 }
-#mo_tab #mybtn {
+.mo #mybtn {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 10px;
 }
-#mo_tab #mybtn button {
+.mo #mybtn button {
   border: 1px solid #9b9f98;
   background-color: white;
   width: 100%;

@@ -1,5 +1,5 @@
-
-<div id="mo_header">
+<div class="mo">
+<div id="header">
     <img src="img/LOGO.png" height="35px" width="90px"/>
     <label><a href="#/city">&nbsp;广州<img src="img/header02.png" height="22px" width="25px"/></a></label>
     <div class="dropdown">
@@ -12,13 +12,14 @@
     </div>
 </div>
 
-<nav class="mo_menu">
+<nav class="menu">
     <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
-        <li ng-class="{active: vm.activeTab == 1}" ng-click="vm.activeTab = 1"><a data-toggle="tab">电影</a></li>
-        <li ng-class="{active: vm.activeTab == 2}" ng-click="vm.activeTab = 2"><a  data-toggle="tab" >影院</a></li>
+        <li ng-class="{active: vm.activeTab == 1}" ng-click="vm.activeTab = 1"><a data-toggle="tab" id="movie_active">电影</a></li>
+        <li ng-class="{active: vm.activeTab == 2}" ng-click="vm.activeTab = 2"><a  data-toggle="tab" id="movie_home">影院</a></li>
     </ul>
 </nav>
-<div id="mo_tab" class="tab-content">
+
+<div id="tab" class="tab-content">
     <!---电影--->
     <div ng-show="vm.activeTab == 1" id="movie">
         <p class="sp">正在售票</p>
@@ -66,8 +67,8 @@
     <div ng-show="vm.activeTab == 2">
         <div class="screening">
             <ul class="nav nav-tabs">
-                <li ng-class="{active: vm.activeTab02 == 1}" ng-click="vm.activeTab02 = 1"><a data-toggle="tab" onclick="show()" id="district_active"><img src="img/address.png" height="20" width="20"/>&nbsp;区域</a></li>
-                <li ng-class="{active: vm.activeTab02 == 2}" ng-click="vm.activeTab02 = 2"><a data-toggle="tab" onclick="show1()" id="feature_active"><img src="img/loudou.png" height="20" width="20"/>&nbsp;特色</a></li>
+                <li ng-class="{active: vm.activeTab02 == 1}" ng-click="vm.activeTab02 = 1"><a data-toggle="tab" onclick="show9()" id="district_active"><img src="img/address.png" height="20" width="20"/>&nbsp;区域</a></li>
+                <li ng-class="{active: vm.activeTab02 == 2}" ng-click="vm.activeTab02 = 2"><a data-toggle="tab" onclick="show8()" id="feature_active"><img src="img/loudou.png" height="20" width="20"/>&nbsp;特色</a></li>
                 <li><a href="#"><img src="img/search.png" height="20" width="20"/>&nbsp;搜索影院</a></li>
             </ul>
         </div>
@@ -186,7 +187,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">广州UA IMAX花城汇电影城<span>5<sup>.0</sup></span></div>
                         <p>花城大道89号花城广场花城汇北区<span class="km">1.8km</span></p>
                         <p class="myp">放映10部余40场</p>
@@ -196,7 +197,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">广州飞扬影城-高德店<span>7<sup>.7</sup></span></div>
                         <p>珠江东路14号高德置地东广场5楼<span class="km">1.9km</span></p>
                         <p class="myp">放映6部余33场</p>
@@ -206,7 +207,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">广州飞扬影城-天河城店<span>6<sup>.6</sup></span></div>
                         <p>天河路208号天河城4楼<span class="km">2.0km</span></p>
                         <p class="myp">放映4部余24场</p>
@@ -216,7 +217,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">金逸影城-广州维家思店<span>6<sup>.4</sup></span></div>
                         <p>黄埔大道西188号维家思广场3楼<span class="km">2.0km</span></p>
                         <p class="myp">放映4部余7场</p>
@@ -226,7 +227,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">百丽宫影城（天环店）<span>5<sup>.7</sup></span></div>
                         <p>天河城218号天环广场负一层B117号<span class="km">2.2km</span></p>
                         <p class="myp">放映4部余24场</p>
@@ -236,7 +237,7 @@
 
             <div class="cinema">
                 <div class="mycinema">
-                    <a href="#">
+                    <a href="#/movieschedule">
                         <div class="theater">金逸空中电影城<span>2<sup>.8</sup></span></div>
                         <p>阅江西路22号广州塔B功能区17-22层<span class="km">2.3km</span></p>
                         <p class="myp">放映6部余10场</p>
@@ -250,5 +251,5 @@
         </div>
     </div>
 </div>
-
+</div>
 <script src="../js/movie_show.js"></script>

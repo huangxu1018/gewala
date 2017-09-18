@@ -32,7 +32,7 @@ var timing = document.getElementById('timing');
 var district_active = document.getElementById('district_active');
 var feature_active = document.getElementById('feature_active');
 var timing_active = document.getElementById('timing_active');
-function show() {
+function show9() {
     if (district.style.display == "" || district.style.display == "none") {
         district.style.display = "block";
         feature.style.display = "none";
@@ -45,7 +45,7 @@ function show() {
         district_active.style.color = "black";
     }
 }
-function show1() {
+function show8() {
     if (feature.style.display == "" || feature.style.display == "none") {
         feature.style.display = "block";
         district.style.display = "none";
