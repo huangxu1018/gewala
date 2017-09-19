@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD:src/html/selectmovie.html
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../dist/css/selectmovie.css">
-
-
-</head>
-<body>
 <div id="SelectM">
-=======
->>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/selectmovie/selectmovie.html
 <!--顶部栏-->
 <div id="header">
     <a style="width:10%" href="#/cinema" class="back"><</a>
@@ -47,6 +36,7 @@
 <div id="schedule01" class="tab-content">
 
     <div ng-show="vs.activeTab == 1">
+        <a href="#/seat" style="text-decoration: none;color: black">
         <table>
             <tr>
                 <td><h4 class="sj"><b>10:10</b></h4><p class="sc">12:23散场</p></td>
@@ -84,8 +74,10 @@
                 <td><h5 class="jq">￥90</h5><s>￥150</s></td>
             </tr>
         </table>
+        </a>
     </div>
     <div ng-show="vs.activeTab == 2">
+        <a href="#/seat" style="text-decoration: none;color: black">
         <table>
             <tr>
                 <td><h4 class="sj"><b>12:10</b></h4><p class="sc">14:23散场</p></td>
@@ -123,11 +115,8 @@
                 <td><h5 class="jq">￥50</h5><s>￥90</s></td>
             </tr>
         </table>
+        </a>
     </div>
 </div>
-<<<<<<< HEAD:src/html/selectmovie.html
 </div>
-</body>
-</html>
-=======
->>>>>>> 898bda5684c4622575e3c00f19189e79021347a6:src/selectmovie/selectmovie.html
+
