@@ -51,6 +51,7 @@
   border-radius: 0px;
   border: 0px;
   padding: 9px 15px;
+  color: black;
 }
 .mo .nav-tabs > li > a:hover {
   background-color: white;
@@ -60,6 +61,7 @@
 .mo .nav-tabs > li.active > a:focus,
 .mo .nav-tabs > li.active > a:hover {
   border: 0px;
+  color: #f2620f ;
 }
 .mo #movie {
   padding-top: 15px;
@@ -116,7 +118,6 @@
   color: black;
 }
 .mo .screening .nav li a:hover {
-  color: #F36523;
   background-color: white;
 }
 .mo #mycontent {

@@ -5,9 +5,19 @@
   /*第三方登陆*/
 }
 #loginpage #header {
-  height: 46px;
   width: 100%;
-  background-color: #f26422;
+  height: 46px;
+  background-color: #f26522;
+  line-height: 46px;
+  position: relative;
+  text-align: center;
+}
+#loginpage #header .retu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 #loginpage #header a {
   text-decoration: none;
@@ -15,7 +25,7 @@
   display: inline-block;
   line-height: 46px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 #loginpage #select {
   width: 100%;

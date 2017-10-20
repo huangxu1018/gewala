@@ -6,9 +6,24 @@
   /*时间场次*/
 }
 #MShedule #header {
-  height: 46px;
   width: 100%;
-  background-color: #f26422;
+  height: 46px;
+  background-color: #f26522;
+  line-height: 46px;
+  position: relative;
+  text-align: center;
+}
+#MShedule #header .retu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#MShedule #header .retu a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
 }
 #MShedule #header a {
   text-decoration: none;
