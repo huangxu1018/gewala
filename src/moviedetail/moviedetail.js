@@ -17,12 +17,13 @@ moviedetailApp.controller("moviedetailCtrol",function ($scope,$http,$routeParams
             $scope.message = data.msg;
         } else {
             console.log(data);
-            $scope.movie = data.subjects[0];//
+            $scope.movie = data.subjects[0];
+            $("#top_video").css("background","linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9)),url("+$scope.movie.images.large+") no-repeat");
+            $("#top_video").css("background-size","100% 100%");
             $scope.message = '';
         }
     };
     $http.jsonp("https://api.douban.com//v2/movie/search?q="+$routeParams.id+"&callback=doubanMovieDetailCallback")
-
     $scope.lists = [
         {
             head_img:"img/default_head.png",

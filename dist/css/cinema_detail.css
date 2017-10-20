@@ -1,35 +1,32 @@
-body {
-  font-family: 华文楷体;
-}
-#header {
+#cinemadetail #header {
   background-color: #f26522;
   text-align: center;
   line-height: 40px;
   color: white;
 }
-#header a {
+#cinemadetail #header a {
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
-#header .back {
+#cinemadetail #header .back {
   margin-left: 10px;
   float: left;
 }
-#header .back_img {
+#cinemadetail #header .back_img {
   width: 25px;
   height: 25px;
 }
-#header #btn {
+#cinemadetail #header #btn {
   float: right;
 }
-#header .cinema_headname {
+#cinemadetail #header .cinema_headname {
   font-size: 18px;
 }
-#header .dropdown {
+#cinemadetail #header .dropdown {
   padding-right: 2%;
 }
-#header .dropdown-menu {
+#cinemadetail #header .dropdown-menu {
   background-color: #f2620f;
   height: 85px;
   width: 130px;
@@ -38,43 +35,42 @@ body {
   border-radius: 0px;
   min-width: 10%;
 }
-#header .dropdown-menu a:hover {
+#cinemadetail #header .dropdown-menu a:hover {
   background-color: #f26522 ;
 }
-#container {
+#cinemadetail #container {
   margin-top: -20px;
   background-color: #F3F3F3;
 }
-#detail {
+#cinemadetail #detail {
   margin-top: 12px;
 }
-#detail .cinema_name {
+#cinemadetail #detail .cinema_name {
   font-size: 18px;
   margin-bottom: 4px;
 }
-#detail .tel {
+#cinemadetail #detail .tel {
   margin-top: -10px;
 }
-#detail .tel i {
+#cinemadetail #detail .tel i {
   color: blue;
 }
-#main #feature .feature_title,
-#main #service .service_title,
-#main #wala .wala_title {
+#cinemadetail #main #feature .feature_title,
+#cinemadetail #main #service .service_title,
+#cinemadetail #main #wala .wala_title {
   border-left: 5px solid #F26522;
 }
-#main #service ul {
-  width: 330px;
-  margin-left: -45px;
+#cinemadetail #main #service ul {
+  margin-left: -5px;
 }
-#main #service ul li {
+#cinemadetail #main #service ul li {
   list-style-type: none;
   width: 225px;
   height: 205px;
   overflow: hidden;
   float: left;
 }
-.list_head {
+#cinemadetail .list_head {
   color: #FF6600;
   width: 55px;
   height: 50px;
@@ -84,34 +80,34 @@ body {
   text-align: center;
   line-height: 75px;
 }
-#list_head_goods {
+#cinemadetail #list_head_goods {
   border-left: 5px solid #5DCD35;
   background: url("../../img/goods.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_glasses {
+#cinemadetail #list_head_glasses {
   border-left: 5px solid #F0C50B;
   background: url("../../img/glosses.gif") no-repeat 10px 2px;
   background-color: #FEFEFE;
 }
-#list_head_bus {
+#cinemadetail #list_head_bus {
   border-left: 5px solid #FF6600;
   background: url("../../img/bus.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_foods {
+#cinemadetail #list_head_foods {
   border-left: 5px solid #F0C50B;
   background: url("../../img/foods.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_shop,
-#list_head_shop02 {
+#cinemadetail #list_head_shop,
+#cinemadetail #list_head_shop02 {
   border-left: 5px solid #FF6600;
   background: url("../../img/shop.gif") no-repeat #FEFEFE 10px 2px;
 }
-#list_head_children,
-#list_head_children02 {
+#cinemadetail #list_head_children,
+#cinemadetail #list_head_children02 {
   border-left: 5px solid #5DCD35;
   background: url("../../img/children.gif") no-repeat #FEFEFE 10px 2px;
 }
-.list_content {
+#cinemadetail .list_content {
   width: 150px;
   height: 50px;
   background-color: #FEFEFE;
@@ -121,7 +117,7 @@ body {
   overflow: hidden;
   line-height: 50px;
 }
-#click_more {
+#cinemadetail #click_more {
   width: 100%;
   height: 30px;
   background: white;

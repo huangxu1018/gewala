@@ -43,13 +43,6 @@
   background-size: 100% 100%;
   margin-top: -20px;
 }
-#top_video .img_large {
-  width: 109%;
-  height: 200px;
-  z-index: 1;
-  margin-top: -55px;
-  margin-left: -15px;
-}
 #top_video #back_btn {
   margin-top: 10px;
 }
