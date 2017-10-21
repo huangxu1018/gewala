@@ -13,15 +13,12 @@ movieApp.controller("movieCtrol",["$scope", "$http",
             } else {
                 // console.log(data);
                 $scope.movies = data;
-                $scope.message = '';
             }
         };
         //网络请求地址
         //https://api.douban.com//v2/movie/search?q=
         var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
-        $http.jsonp(url).error(function () {
-
-        });
+        $http.jsonp(url);
     }]);
 
 
