@@ -12,8 +12,6 @@ cinemaApp.controller("cinemaCtrol", function ($scope) {
         $scope.activeTab1_01 ++;
         $scope.activeTab1_02 = 1;
         $scope.activeTab1_03 = 1;
-        $scope.isError=true;
-
     };
     $scope.addTab1_02 = function () {
         $scope.activeTab1_02 ++;

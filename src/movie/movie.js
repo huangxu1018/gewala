@@ -19,6 +19,15 @@ movieApp.controller("movieCtrol",["$scope", "$http",
         //https://api.douban.com//v2/movie/search?q=
         var url = "https://api.douban.com/v2/movie/in_theaters?callback=doubanMovieCallback";
         $http.jsonp(url);
+        $scope.addTab1_1 = function () {
+            $scope.activeTab1_1 ++;
+            $scope.activeTab1_2 = 1;
+
+        };
+        $scope.addTab1_2 = function () {
+            $scope.activeTab1_2 ++;
+            $scope.activeTab1_1 = 1;
+        };
     }]);
 
 
